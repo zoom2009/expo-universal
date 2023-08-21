@@ -1,7 +1,6 @@
 import cn from '@/utilities/cn'
 import { memo } from 'react'
 import { Text, View, TextProps } from 'react-native'
-import { clsx } from 'clsx'
 
 interface ILabelProps {
   children: string
@@ -28,7 +27,12 @@ const Label = memo((props: ILabelProps) => {
     <View className="flex flex-row items-center">
       <Text
         style={color ? { color } : {}}
-        className={cn('text-green-500', 'text-red-500', 'text-blue-500')}
+        className={cn([
+          'text-sm sm:text-md',
+          fullText && 'whitespace-pre',
+          textClassName,
+          bold && 'font-bold'
+        ])}
         {...otherTextProps}
       >
         {children}
