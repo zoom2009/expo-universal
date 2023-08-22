@@ -17,7 +17,7 @@ const _3DropDown = () => {
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
-      <View className="h-4" />
+      <View className="h-2" />
       <View style={{ zIndex: 3 }}>
         <Dropdown
           label="Basic"

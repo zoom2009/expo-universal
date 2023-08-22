@@ -33,6 +33,7 @@ export default function Layout() {
         <Drawer.Screen name="_1Label" options={{ title: 'Label' }} />
         <Drawer.Screen name="_2Button" options={{ title: 'Button' }} />
         <Drawer.Screen name="_3Dropdown" options={{ title: 'Dropdown' }} />
+        <Drawer.Screen name="_4Icon" options={{ title: 'Icon' }} />
       </Drawer>
     </EventProvider>
   )
