@@ -8,6 +8,12 @@ const _4Icon = () => {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
       <View className="h-2" />
+      <Label required bold>NOTE</Label>
+      <View className="h-2" />
+      <CodeHighLighter language="typescript">
+        {`// typing <Icon. this will be auto complete list of icons`}
+      </CodeHighLighter>
+      <View className="h-8" />
       <Label required bold>Basic</Label>
       <View className="h-4" />
       <View className="flex flex-row items-center flex-wrap gap-4">
@@ -18,12 +24,22 @@ const _4Icon = () => {
         <Icon.FileZip size={36} color="brown" />
       </View>
       <View className="h-4" />
-      <CodeHighLighter language="typescript">
-        {`// typing <Icon. this will be auto complete list of icons`}
-      </CodeHighLighter>
-      <View className="h-2" />
       <CodeHighLighter>
         {`<Icon.Activity size={28} color="red" />`}
+      </CodeHighLighter>
+      <View className="h-8" />
+      <Label required bold>With Weight</Label>
+      <View className="h-4" />
+      <View className="flex flex-row items-center flex-wrap gap-4">
+        <Icon.Activity weight="fill" size={36} color="red" />
+        <Icon.Car weight="fill" size={36} color="blue" />
+        <Icon.Alarm weight="fill" size={36} color="#e67e22" />
+        <Icon.Book weight="fill" size={36} color="#95a5a6" />
+        <Icon.FileZip weight="fill" size={36} color="brown" />
+      </View>
+      <View className="h-4" />
+      <CodeHighLighter>
+        {`<Icon.Activity weight="fill" size={28} color="red" />`}
       </CodeHighLighter>
       <TouchableOpacity
         onPress={() => Linking.openURL('https://phosphoricons.com/')}

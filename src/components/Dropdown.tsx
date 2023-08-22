@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import DropDownPicker from 'react-native-dropdown-picker'
 import { OutsidePressHandler } from '@/components/OutsidePressHandler'
 import WithLabel from './Hoc/WithLabel'
-import { View, ViewProps } from 'react-native'
 
 export type TOption = { label: string, value: string }
 
