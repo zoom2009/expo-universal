@@ -13,6 +13,8 @@ type TDirection = 'vertical' | 'horizontal'
 interface IToggleSingleProps {
   type: TType
   label?: string
+  bold?: boolean
+  required?: boolean
   multiple: false | undefined
   value: boolean
   onToggle: (value: boolean) => void
@@ -21,6 +23,8 @@ interface IToggleSingleProps {
 interface IToggleMultipleProps {
   type: TType
   label?: string
+  bold?: boolean
+  required?: boolean
   multiple: true
   value: TValue[]
   direction: TDirection
@@ -76,6 +80,8 @@ const Toggle = (props: IToggleSingleProps | IToggleMultipleProps) => {
     multiple,
     value,
     onToggle,
+    bold,
+    required,
   } = props
 
   const onToggleSingle = ({  value: _v, label: _l  }: IOnToggleProps) => () => {
@@ -102,7 +108,7 @@ const Toggle = (props: IToggleSingleProps | IToggleMultipleProps) => {
   }
 
   if (multiple) return (
-    <WithLabel label={label}>
+    <WithLabel label={label} bold={bold} required={required}>
       <View
         className={cn([
           'flex',

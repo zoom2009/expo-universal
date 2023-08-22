@@ -34,6 +34,14 @@ const _2Button = () => {
       <Button isFull type={buttonType as any} onPress={() => {}} text="is Full" />
       <View className="h-4" />
       <CodeHighLighter>{`<Button isFull type="${buttonType}" onPress={...} text="isFull" />`}</CodeHighLighter>
+      <View className="h-10" />
+      <View className="w-full h-[1px] bg-[#999]" />
+      <View className="h-10" />
+      <Label bold>Button Bold</Label>
+      <View className="h-4" />
+      <Button bold type={buttonType as any} onPress={() => {}} text="Bold" />
+      <View className="h-4" />
+      <CodeHighLighter>{`<Button bold type="${buttonType}" onPress={...} text="Bold" />`}</CodeHighLighter>
     </ScrollView>
   )
 }

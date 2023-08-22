@@ -14,7 +14,9 @@ const _5Toggle = () => {
     <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
       <View className="h-2" />
       <Toggle
-        label="Hi"
+        label="Ex incididunt sunt fugiat laboris eu pariatur ea exercitation cupidatat labore pariatur irure."
+        required
+        bold
         multiple
         type="radio"
         direction="vertical"
