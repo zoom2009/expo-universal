@@ -22,6 +22,7 @@ const _2Button = () => {
       />
       <View className="h-10" />
       <Label bold>Basic Button</Label>
+      <View className="h-4" />
       <Button type={buttonType as any} onPress={() => {}} text="Basic" />
       <View className="h-4" />
       <CodeHighLighter>{`<Button type="${buttonType}" onPress={...} text="Basic" />`}</CodeHighLighter>

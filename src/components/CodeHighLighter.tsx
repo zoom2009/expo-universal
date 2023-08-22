@@ -5,16 +5,17 @@ import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 interface ICodeHighLighterProps {
   children: string
+  language?: string
 }
 
 const CodeHighLighter = (props: ICodeHighLighterProps) => {
-  const { children } = props
+  const { children, language = 'xml' } = props
 
   return (
     <CodeHighlighter
       hljsStyle={atomOneLight}
       textStyle={styles.text}
-      language="xml"
+      language={language}
       containerStyle={styles.containerStyle}
     >
       {children}
