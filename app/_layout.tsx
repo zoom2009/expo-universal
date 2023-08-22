@@ -1,9 +1,17 @@
 import { useEffect } from 'react'
+import { Platform } from 'react-native'
 import { NativeWindStyleSheet } from 'nativewind'
 import { Drawer } from 'expo-router/drawer'
 import * as SplashScreen from 'expo-splash-screen'
 import { useFonts, CourierPrime_400Regular } from '@expo-google-fonts/courier-prime'
 import { EventProvider } from '@/components/OutsidePressHandler'
+import 'react-native-reanimated'
+import 'react-native-gesture-handler'
+
+if (Platform.OS === 'web') {
+  // @ts-ignore
+  global._frameTimestamp = null
+}
 
 NativeWindStyleSheet.setOutput({
   default: 'native',

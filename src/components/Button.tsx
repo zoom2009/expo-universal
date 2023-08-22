@@ -24,21 +24,21 @@ interface IButtonProps {
 const getColor = (type: IButtonType) => {
   if (type === 'disabled') return { backgroundColor: 'bg-disabled', textColor: 'text-white', borderColor: 'border-disabled' }
   if (type === 'primary') return { backgroundColor: 'bg-primary', textColor: 'text-white', borderColor: 'border-primary' }
-  if (type === 'secondary') return { backgroundColor: 'bg-secondary', textColor: 'text-white', borderColor: 'border-secondary' }
+  if (type === 'secondary') return { backgroundColor: 'bg-secondary', textColor: 'text-black', borderColor: 'border-secondary' }
   if (type === 'info') return { backgroundColor: 'bg-info', textColor: 'text-white', borderColor: 'border-info' }
   if (type === 'success') return { backgroundColor: 'bg-success', textColor: 'text-white', borderColor: 'border-success' }
   if (type === 'warning') return { backgroundColor: 'bg-warning', textColor: 'text-white', borderColor: 'border-warning' }
   if (type === 'danger') return { backgroundColor: 'bg-danger', textColor: 'text-white', borderColor: 'border-danger' }
-  if (type === 'transparent') return { backgroundColor: 'bg-transparent', textColor: 'text-white', borderColor: 'border-transparent' }
+  if (type === 'transparent') return { backgroundColor: 'bg-transparent', textColor: 'text-black', borderColor: 'border-transparent' }
   if (type === 'muted') return { backgroundColor: 'bg-muted', textColor: 'text-white', borderColor: 'border-muted' }
-  if (type === 'disabled-outline') return { backgroundColor: 'bg-disabled-outline', textColor: 'text-disabled', borderColor: 'border-disabled' }
+  if (type === 'disabled-outline') return { backgroundColor: 'bg-disabled-outline', textColor: 'text-white', borderColor: 'border-disabled' }
   if (type === 'primary-outline') return { backgroundColor: 'bg-primary-outline', textColor: 'text-primary', borderColor: 'border-primary' }
   if (type === 'secondary-outline') return { backgroundColor: 'bg-secondary-outline', textColor: 'text-secondary', borderColor: 'border-secondary' }
   if (type === 'info-outline') return { backgroundColor: 'bg-info-outline', textColor: 'text-info', borderColor: 'border-info' }
   if (type === 'success-outline') return { backgroundColor: 'bg-success-outline', textColor: 'text-success', borderColor: 'border-success' }
   if (type === 'warning-outline') return { backgroundColor: 'bg-warning-outline', textColor: 'text-warning', borderColor: 'border-warning' }
   if (type === 'danger-outline') return { backgroundColor: 'bg-danger-outline', textColor: 'text-danger', borderColor: 'border-danger' }
-  if (type === 'transparent-outline') return { backgroundColor: 'bg-transparent-outline', textColor: 'text-transparent', borderColor: 'border-transparent' }
+  if (type === 'transparent-outline') return { backgroundColor: 'bg-transparent-outline', textColor: 'text-black', borderColor: 'border-transparent' }
   if (type === 'muted-outline') return { backgroundColor: 'bg-muted-outline', textColor: 'text-muted', borderColor: 'border-muted' }
   return { backgroundColor: '', textColor: '', borderColor: '' }
 }
