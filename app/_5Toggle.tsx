@@ -19,18 +19,20 @@ const _5Toggle = () => {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
       <View className="h-2" />
-      <Dropdown
-        label="Toggle Type"
-        bold
-        required
-        options={[{ label: 'radio', value: 'radio' }, { label: 'checkbox', value: 'checkbox' }]}
-        onChange={(v) => {
-          setT0(false)
-          setT1(defaultT1)
-          setType(v)
-        }}
-        value={type}
-      />
+      <View className="z-10">
+        <Dropdown
+          label="Toggle Type"
+          bold
+          required
+          options={[{ label: 'radio', value: 'radio' }, { label: 'checkbox', value: 'checkbox' }]}
+          onChange={(v) => {
+            setT0(false)
+            setT1(defaultT1)
+            setType(v)
+          }}
+          value={type}
+        />
+      </View>
       <View className="h-8" />
       <Toggle
         label={`Basic (${type})`}

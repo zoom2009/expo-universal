@@ -5,6 +5,7 @@ import Button from '@/components/Button'
 import Dropdown from '@/components/Dropdown'
 import { buttonType as buttonTypeOptions } from '@/constants/buttonType'
 import Label from '@/components/Label'
+import { Icon } from '@/components/Icon'
 
 const _2Button = () => {
   const [buttonType, setButtonType] = useState<string>('danger')
@@ -12,14 +13,16 @@ const _2Button = () => {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
       <View className="h-2" />
-      <Dropdown
-        label="Button Type"
-        bold
-        required
-        options={buttonTypeOptions.map((t: string) => ({ label: t, value: t }))}
-        onChange={setButtonType}
-        value={buttonType}
-      />
+      <View className="z-10">
+        <Dropdown
+          label="Button Type"
+          bold
+          required
+          options={buttonTypeOptions.map((t: string) => ({ label: t, value: t }))}
+          onChange={setButtonType}
+          value={buttonType}
+        />
+      </View>
       <View className="h-10" />
       <Label bold>Basic Button</Label>
       <View className="h-4" />
@@ -29,19 +32,26 @@ const _2Button = () => {
       <View className="h-10" />
       <View className="w-full h-[1px] bg-[#999]" />
       <View className="h-10" />
-      <Label bold>Button Full Width</Label>
+      <Label bold>Button Full Width & Bold</Label>
       <View className="h-4" />
-      <Button isFull type={buttonType as any} onPress={() => {}} text="is Full" />
+      <Button isFull bold type={buttonType as any} onPress={() => {}} text="is Full" />
       <View className="h-4" />
-      <CodeHighLighter>{`<Button isFull type="${buttonType}" onPress={...} text="isFull" />`}</CodeHighLighter>
+      <CodeHighLighter>{`<Button isFull bold type="${buttonType}" onPress={...} text="isFull" />`}</CodeHighLighter>
       <View className="h-10" />
       <View className="w-full h-[1px] bg-[#999]" />
       <View className="h-10" />
-      <Label bold>Button Bold</Label>
+      <Label bold>Button With Icon</Label>
       <View className="h-4" />
-      <Button bold type={buttonType as any} onPress={() => {}} text="Bold" />
+      <Button
+        RightIcon={<Icon.GameController weight="bold" size={24} color="white" />}
+        LeftIcon={<Icon.Airplane weight="fill" size={24} color="white" />}
+        bold
+        type={buttonType as any}
+        onPress={() => {}}
+        text="Bold "
+      />
       <View className="h-4" />
-      <CodeHighLighter>{`<Button bold type="${buttonType}" onPress={...} text="Bold" />`}</CodeHighLighter>
+      <CodeHighLighter language="vbscriptHtml">{`<Button\n\tRightIcon={<Icon1 />}\n\tLeftIcon={<Icon2 />}\n\tbold\n\ttype="${buttonType}"\n\tonPress={...}\n\ttext="Bold"\n/>`}</CodeHighLighter>
     </ScrollView>
   )
 }

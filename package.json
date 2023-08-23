@@ -19,7 +19,6 @@
     "expo-status-bar": "~1.6.0",
     "moti": "^0.26.0",
     "nativewind": "^2.0.11",
-    "phosphor-react": "^1.4.1",
     "phosphor-react-native": "^1.1.2",
     "ramda": "^0.29.0",
     "react": "18.2.0",

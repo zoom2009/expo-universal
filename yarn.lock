@@ -6345,6 +6345,16 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lucide-react-native@^0.268.0:
+  version "0.268.0"
+  resolved "https://registry.yarnpkg.com/lucide-react-native/-/lucide-react-native-0.268.0.tgz#8d841d9d16c69e8771b7e440ea9144f57a52d797"
+  integrity sha512-tv+GZ8Zhfsk5IpADhGJXDnbiEBZVlfHFcjs133GCNJz0ffWKq8v3qGm6wnNpJjsrmGYvHAbduWQ3Z3pUxuZ0cQ==
+
+lucide-react@^0.268.0:
+  version "0.268.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.268.0.tgz#24ed431839f9b30eaac0dab4cbd37626aeaae1e8"
+  integrity sha512-XP/xY3ASJAViqNqVnDRcEfdxfRB7uNST8sqTLwZhL983ikmHMQ7qQak7ZxrnXOVhB3QDBawdr3ANq0P+iWHP/g==
+
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
@@ -7398,11 +7408,6 @@ phosphor-react-native@^1.1.2:
   integrity sha512-uWYDG4S70JP89jmXljCA0K6/0mjQDHH8GVHFwF+dmbdYkALIE84jMMSemkFtjdsazB1j+xDBJcGaKN3PdEC8uQ==
   dependencies:
     caniuse-lite "^1.0.30001346"
-
-phosphor-react@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/phosphor-react/-/phosphor-react-1.4.1.tgz#97b0e034d9937db9b97fe53b186e9646464fd4e7"
-  integrity sha512-gO5j7U0xZrdglTAYDYPACU4xDOFBTJmptrrB/GeR+tHhCZF3nUMyGmV/0hnloKjuTrOmpSFlbfOY78H39rgjUQ==
 
 picocolors@^1.0.0:
   version "1.0.0"

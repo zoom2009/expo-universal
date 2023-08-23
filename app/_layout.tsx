@@ -37,6 +37,7 @@ export default function Layout() {
         <Drawer.Screen name="_5Toggle" options={{ title: 'Toggle (Checkbox, Radio)' }} />
         <Drawer.Screen name="_6Alert" options={{ title: 'Alert' }} />
         <Drawer.Screen name="_7LoadingSpinnerOverlay" options={{ title: 'LoadingSpinnerOverlay' }} />
+        <Drawer.Screen name="_8Accordion" options={{ title: 'Accordion' }} />
       </Drawer>
     </EventProvider>
   )
