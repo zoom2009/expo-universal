@@ -16,9 +16,9 @@ const _7LoadingSpinnerOverlay = () => {
       <LoadingSpinnerOverlay
         visible={isShow2}
         text="Creating profile..."
-        backgroundColor="green"
-        textColor="red"
-        spinnerColor="pink"
+        backgroundColor="#95afc0"
+        textColor="black"
+        spinnerColor="white"
       />
       <View className="h-2" />
       <Label bold>Basic</Label>
@@ -50,7 +50,7 @@ const _7LoadingSpinnerOverlay = () => {
       />
       <View className="h-4" />
       <CodeHighLighter>
-        {`<LoadingSpinnerOverlay\n\tvisible={isShow}\n\ttext="Creating profile..."\n\tbackgroundColor="green"\n\ttextColor="red"\n\tspinnerColor="pink"\n/>`}
+        {`<LoadingSpinnerOverlay\n\tvisible={isShow}\n\ttext="Creating profile..."\n\tbackgroundColor="#95afc0"\n\ttextColor="black"\n\tspinnerColor="white"\n/>`}
       </CodeHighLighter>
       <View className="h-10" />
     </PageContainer>
