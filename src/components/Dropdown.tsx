@@ -1,12 +1,13 @@
 import React, { useCallback, useState } from 'react'
 import DropDownPicker from 'react-native-dropdown-picker'
 import { OutsidePressHandler } from '@/components/OutsidePressHandler'
-import WithLabel from './Hoc/WithLabel'
+import WithLabelAndError from './Hoc/WithLabelAndError'
 
 export type TOption = { label: string, value: string }
 
 export interface IDropdownProps {
   label?: string
+  error?: string
   bold?: boolean
   required?: boolean
   placeholder?: string
@@ -20,6 +21,7 @@ export interface IDropdownProps {
 const Dropdown = (props: IDropdownProps) => {
   const {
     label,
+    error,
     bold = false,
     required = false,
     searchable = false,
@@ -36,7 +38,7 @@ const Dropdown = (props: IDropdownProps) => {
 
   return (
     <OutsidePressHandler onOutside={onOutside}>
-      <WithLabel label={label} bold={bold} required={required}>
+      <WithLabelAndError label={label} bold={bold} required={required} error={error}>
         <DropDownPicker
           searchable={searchable}
           searchPlaceholder={searchPlaceholder}
@@ -49,7 +51,7 @@ const Dropdown = (props: IDropdownProps) => {
           placeholder={placeholder}
           placeholderStyle={{ color: '#999' }}
         />
-      </WithLabel>
+      </WithLabelAndError>
     </OutsidePressHandler>
   )
 }

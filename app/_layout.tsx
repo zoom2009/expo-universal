@@ -33,13 +33,14 @@ export default function Layout() {
         <Drawer.Screen name="_3Dropdown" options={{ title: 'Dropdown' }} />
         <Drawer.Screen name="_4Icon" options={{ title: 'Icon' }} />
         <Drawer.Screen name="_5Toggle" options={{ title: 'Toggle (Checkbox, Radio)' }} />
-        <Drawer.Screen name="_6Alert" options={{ title: 'Alert' }} />
+        <Drawer.Screen name="_6Input" options={{ title: 'Input' }} />
         <Drawer.Screen name="_7LoadingSpinnerOverlay" options={{ title: 'LoadingSpinnerOverlay' }} />
         <Drawer.Screen name="_8Accordion" options={{ title: 'Accordion' }} />
         <Drawer.Screen name="_9Layout" options={{ title: 'Resposive Layout' }} />
         <Drawer.Screen name="_10OutsidePressHandler" options={{ title: 'OutsidePressHandler' }} />
         <Drawer.Screen name="_11Skeleton" options={{ title: 'Skeleton' }} />
         <Drawer.Screen name="_12Lottie" options={{ title: 'Lottie' }} />
+        <Drawer.Screen name="_13Alert" options={{ title: 'Alert' }} />
       </Drawer>
     </EventProvider>
   )

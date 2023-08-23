@@ -1,12 +1,14 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
 import Label from '@/components/Label'
+import ErrorMessage from '@/components/ErrorMessage'
 
 interface IWithLabelProps {
   children: React.ReactNode
   label?: string
   bold?: boolean
   required?: boolean
+  error?: string
 }
 
 const WithLabel = (props: IWithLabelProps) => {
@@ -15,6 +17,7 @@ const WithLabel = (props: IWithLabelProps) => {
     label,
     bold = false,
     required = false,
+    error,
   } = props
 
   return (
@@ -26,6 +29,7 @@ const WithLabel = (props: IWithLabelProps) => {
       </>
       )}
       {children}
+      {!!error && <ErrorMessage text={error} />}
     </View>
   )
 }

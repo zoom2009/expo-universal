@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import * as R from 'ramda'
-import WithLabel from '@/components/Hoc/WithLabel'
+import WithLabelAndError from '@/components/Hoc/WithLabelAndError'
 import cn from '@/utilities/cn'
 import { Icon } from '@/components/Icon'
 import theme from '@/utilities/theme'
@@ -14,6 +14,7 @@ type TDirection = 'vertical' | 'horizontal'
 interface IToggleSingleProps {
   type: TType
   label?: string
+  error?: string
   bold?: boolean
   required?: boolean
   multiple?: false | undefined
@@ -24,6 +25,7 @@ interface IToggleSingleProps {
 interface IToggleMultipleProps {
   type: TType
   label?: string
+  error?: string
   bold?: boolean
   required?: boolean
   multiple: true
@@ -78,6 +80,7 @@ const Toggle = (props: IToggleSingleProps | IToggleMultipleProps) => {
   const {
     type,
     label,
+    error,
     multiple,
     value,
     onToggle,
@@ -115,7 +118,7 @@ const Toggle = (props: IToggleSingleProps | IToggleMultipleProps) => {
   }
 
   if (multiple) return (
-    <WithLabel label={label} bold={bold} required={required}>
+    <WithLabelAndError error={error} label={label} bold={bold} required={required}>
       <View
         className={cn([
           'flex',
@@ -133,18 +136,18 @@ const Toggle = (props: IToggleSingleProps | IToggleMultipleProps) => {
           />
         ))}
       </View>
-    </WithLabel>
+    </WithLabelAndError>
   )
 
   return (
-    <WithLabel label={label} bold={bold} required={required}>
+    <WithLabelAndError label={label} bold={bold} required={required}>
       <SingleToggle
         type={type}
         label={label}
         checked={value}
         onToggle={onToggleSingle({ value, label })}
       />
-    </WithLabel>
+    </WithLabelAndError>
   )
 }
 

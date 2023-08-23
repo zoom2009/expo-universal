@@ -14,11 +14,11 @@ const _11Skeleton = () => {
       <View className="w-[400px] border-[1px] border-[#ccc] rounded-md p-4">
         <Skeleton isCenter borderRadius={100} width={100} height={100} />
         <View className="h-10" />
-        <Skeleton width={370} height={35} />
-        <View className="h-2" />
-        <Skeleton width={200} height={35} />
+        <Skeleton width={300} height={35} />
         <View className="h-2" />
         <Skeleton width={180} height={35} />
+        <View className="h-2" />
+        <Skeleton width={130} height={35} />
       </View>
       <View className="h-4" />
       <CodeHighLighter>
