@@ -44,7 +44,7 @@ const _5Toggle = () => {
       />
       <View className="h-2" />
       <CodeHighLighter language="typescript">
-        {`const [v0, setV0] = useState(false)`}
+        {`const [t0, setT0] = useState(false)`}
       </CodeHighLighter>
       <View className="h-2" />
       <CodeHighLighter>
