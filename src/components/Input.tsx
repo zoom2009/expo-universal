@@ -12,7 +12,7 @@ interface IInputProps {
   placeholder?: string
   disabledStyle?: boolean
   disabledInput?: boolean
-  errorMessage?: string
+  error?: string
   bold?: boolean
   required?: boolean
   isPassword?: boolean
@@ -42,7 +42,7 @@ const Input = (props: IInputProps) => {
     placeholder,
     disabledStyle,
     disabledInput,
-    errorMessage,
+    error,
     bold,
     required,
     isPassword,
@@ -73,10 +73,10 @@ const Input = (props: IInputProps) => {
   }
 
   const borderColor = useMemo(() => {
-    if (!!errorMessage) return 'border-danger'
+    if (!!error) return 'border-danger'
     if (isFocus) return 'border-info'
     return 'border-[#555]'
-  }, [isFocus, errorMessage])
+  }, [isFocus, error])
 
   // @ts-ignore
   const InputComponent: typeof TextInput = !isMask ? TextInput : MaskedTextInput
@@ -145,7 +145,7 @@ const Input = (props: IInputProps) => {
           </View>
         )}
       </View>
-      <ErrorMessage text={errorMessage} />
+      <ErrorMessage text={error} />
     </View>
   )
 }

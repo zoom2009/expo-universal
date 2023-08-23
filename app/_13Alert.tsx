@@ -6,7 +6,7 @@ import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
 
-const _6Alert = () => {
+const _13Alert = () => {
   const [showAlert, setShowAlert] = useState(false)
   const onHide = () => setShowAlert(false)
 
@@ -61,4 +61,4 @@ const _6Alert = () => {
   )
 }
 
-export default _6Alert
+export default _13Alert
