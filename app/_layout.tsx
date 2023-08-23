@@ -5,8 +5,11 @@ import { Drawer } from 'expo-router/drawer'
 import * as SplashScreen from 'expo-splash-screen'
 import { useFonts, CourierPrime_400Regular } from '@expo-google-fonts/courier-prime'
 import { EventProvider } from '@/components/OutsidePressHandler'
+import { LogBox } from 'react-native'
+
 import 'react-native-reanimated'
 import 'react-native-gesture-handler'
+LogBox.ignoreAllLogs()
 
 if (Platform.OS === 'web') {
   // @ts-ignore
@@ -38,6 +41,7 @@ export default function Layout() {
         <Drawer.Screen name="_6Alert" options={{ title: 'Alert' }} />
         <Drawer.Screen name="_7LoadingSpinnerOverlay" options={{ title: 'LoadingSpinnerOverlay' }} />
         <Drawer.Screen name="_8Accordion" options={{ title: 'Accordion' }} />
+        <Drawer.Screen name="_9Layout" options={{ title: 'Resposive Layout' }} />
       </Drawer>
     </EventProvider>
   )
