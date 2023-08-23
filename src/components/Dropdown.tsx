@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import DropDownPicker from 'react-native-dropdown-picker'
 import { OutsidePressHandler } from '@/components/OutsidePressHandler'
 import WithLabel from './Hoc/WithLabel'
@@ -30,11 +30,12 @@ const Dropdown = (props: IDropdownProps) => {
     onChange,
   } = props
   const [open, setOpen] = useState(false)
+  const onOutside = useCallback(() => {
+    open && setOpen(false)
+  }, [open])
 
   return (
-    <OutsidePressHandler
-      onOutside={() => setOpen(false)}
-    >
+    <OutsidePressHandler onOutside={onOutside}>
       <WithLabel label={label} bold={bold} required={required}>
         <DropDownPicker
           searchable={searchable}

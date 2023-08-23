@@ -36,6 +36,7 @@ export default function Layout() {
         <Drawer.Screen name="_9Layout" options={{ title: 'Resposive Layout' }} />
         <Drawer.Screen name="_10OutsidePressHandler" options={{ title: 'OutsidePressHandler' }} />
         <Drawer.Screen name="_11Skeleton" options={{ title: 'Skeleton' }} />
+        <Drawer.Screen name="_12Lottie" options={{ title: 'Lottie' }} />
       </Drawer>
     </EventProvider>
   )
