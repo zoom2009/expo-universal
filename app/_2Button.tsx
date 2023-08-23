@@ -1,4 +1,4 @@
-import { ScrollView, View } from 'react-native'
+import { View } from 'react-native'
 import React, { useState } from 'react'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import Button from '@/components/Button'
@@ -6,12 +6,13 @@ import Dropdown from '@/components/Dropdown'
 import { buttonType as buttonTypeOptions } from '@/constants/buttonType'
 import Label from '@/components/Label'
 import { Icon } from '@/components/Icon'
+import PageContainer from '@/layout/PageContainer'
 
 const _2Button = () => {
   const [buttonType, setButtonType] = useState<string>('danger')
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <View className="z-10">
         <Dropdown
@@ -51,7 +52,7 @@ const _2Button = () => {
       />
       <View className="h-4" />
       <CodeHighLighter language="vbscriptHtml">{`<Button\n\tRightIcon={<Icon1 />}\n\tLeftIcon={<Icon2 />}\n\tbold\n\ttype="${buttonType}"\n\tonPress={...}\n\ttext="Bold"\n/>`}</CodeHighLighter>
-    </ScrollView>
+    </PageContainer>
   )
 }
 

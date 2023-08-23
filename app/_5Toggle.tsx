@@ -1,8 +1,9 @@
-import { View, ScrollView } from 'react-native'
+import { View } from 'react-native'
 import React, { useState } from 'react'
 import Toggle, { TValue } from '@/components/Toggle'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import Dropdown from '@/components/Dropdown'
+import PageContainer from '@/layout/PageContainer'
 
 const defaultT1 = [
   { label: 'op1', value: false },
@@ -17,7 +18,7 @@ const _5Toggle = () => {
   const [t1, setT1] = useState<TValue[]>(defaultT1)
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <View className="z-10">
         <Dropdown
@@ -75,7 +76,7 @@ const _5Toggle = () => {
         {`<Toggle\n\tlabel="Multiple Options (${type})"\n\trequired\n\tbold\n\tmultiple\n\ttype="${type}"\n\tdirection="vertical"\n\tvalue={t1}\n\tonToggle={setT1}\n/>`}
       </CodeHighLighter>
       <View className="h-10" />
-    </ScrollView>
+    </PageContainer>
   )
 }
 

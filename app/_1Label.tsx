@@ -1,11 +1,13 @@
-import { ScrollView, View } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import Label from '@/components/Label'
+import PageContainer from '@/layout/PageContainer'
 
 const _1Label = () => {
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
+      <View className="h-2" />
       <Label>Basic</Label>
       <View className="h-2" />
       <CodeHighLighter>{`<Label>Basic</Label>`}</CodeHighLighter>
@@ -17,7 +19,7 @@ const _1Label = () => {
       <Label bold>With Bold</Label>
       <View className="h-2" />
       <CodeHighLighter>{`<Label bold>With Bold</Label>`}</CodeHighLighter>
-    </ScrollView>
+    </PageContainer>
   )
 }
 

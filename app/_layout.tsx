@@ -5,8 +5,11 @@ import { Drawer } from 'expo-router/drawer'
 import * as SplashScreen from 'expo-splash-screen'
 import { useFonts, CourierPrime_400Regular } from '@expo-google-fonts/courier-prime'
 import { EventProvider } from '@/components/OutsidePressHandler'
+import * as ScreenOrientation from 'expo-screen-orientation'
 import 'react-native-reanimated'
 import 'react-native-gesture-handler'
+
+ScreenOrientation.unlockAsync()
 
 // @ts-ignore
 Platform.OS === 'web' && (global._frameTimestamp = null)

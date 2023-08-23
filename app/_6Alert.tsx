@@ -1,16 +1,17 @@
-import { View, Text, ScrollView, TouchableOpacity, Linking } from 'react-native'
+import { View, Text, TouchableOpacity, Linking } from 'react-native'
 import React, { useState } from 'react'
 import { Alert } from '@/components/Alert'
 import Button, { ACTIVE_OPACITY } from '@/components/Button'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import PageContainer from '@/layout/PageContainer'
 
 const _6Alert = () => {
   const [showAlert, setShowAlert] = useState(false)
   const onHide = () => setShowAlert(false)
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <Alert
         show={showAlert}
         title="Alert Title"
@@ -56,7 +57,7 @@ const _6Alert = () => {
         <Text className="text-lg font-bold text-blue-400">More Info About Alert Lib.</Text>
       </TouchableOpacity>
       <View className="h-10" />
-    </ScrollView>
+    </PageContainer>
   )
 }
 

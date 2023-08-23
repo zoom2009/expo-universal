@@ -1,13 +1,14 @@
-import { View, Text, ScrollView, TouchableOpacity, Linking } from 'react-native'
+import { View, Text, TouchableOpacity, Linking } from 'react-native'
 import React from 'react'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import { Icon } from '@/components/Icon'
 import Label from '@/components/Label'
 import { ACTIVE_OPACITY } from '@/components/Button'
+import PageContainer from '@/layout/PageContainer'
 
 const _4Icon = () => {
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <Label required bold>NOTE</Label>
       <View className="h-2" />
@@ -49,7 +50,7 @@ const _4Icon = () => {
       >
         <Text className="text-lg font-bold text-blue-400">See all icons.</Text>
       </TouchableOpacity>
-    </ScrollView>
+    </PageContainer>
   )
 }
 

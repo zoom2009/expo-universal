@@ -1,16 +1,17 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View } from 'react-native'
 import React, { useRef } from 'react'
 import { Lottie } from '@/components/Lottie'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import { Layout } from '@/components/Layout'
 import Button from '@/components/Button'
+import PageContainer from '@/layout/PageContainer'
 
 const _12Lottie = () => {
   const lottieRef: any = useRef()
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />
@@ -68,7 +69,7 @@ const _12Lottie = () => {
         {`const play = () => lottieRef.current.play()\nconst pause = () => lottieRef.current.pause()\nconst resume = () => lottieRef.current.resume()\nconst reset = () => lottieRef.current.reset()`}
       </CodeHighLighter>
       <View className="h-10" />
-    </ScrollView>
+    </PageContainer>
   )
 }
 

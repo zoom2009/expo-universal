@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { View, ScrollView, Text } from 'react-native'
+import { View, Text } from 'react-native'
 import Label from '@/components/Label'
 import { OutsidePressHandler } from '@/components/OutsidePressHandler'
 import { useFocusEffect } from 'expo-router'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import PageContainer from '@/layout/PageContainer'
 
 const _10OutsidePressHandler = () => {
   const [counter, setCounter] = useState(0)
@@ -20,7 +21,7 @@ const _10OutsidePressHandler = () => {
   )
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />
@@ -43,7 +44,7 @@ const _10OutsidePressHandler = () => {
       <CodeHighLighter>
         {`<OutsidePressHandler onOutside={onCount}>\n\t<Box />\n</OutsidePressHandler>`}
       </CodeHighLighter>
-    </ScrollView>
+    </PageContainer>
   )
 }
 

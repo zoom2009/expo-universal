@@ -1,7 +1,8 @@
-import { View, ScrollView } from 'react-native'
+import { View } from 'react-native'
 import React, { useState } from 'react'
 import Dropdown from '@/components/Dropdown'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import PageContainer from '@/layout/PageContainer'
 
 const options = [
   { label: 'op1', value: 'op1' },
@@ -16,7 +17,7 @@ const _3DropDown = () => {
   const [v2, setV2] = useState<string | null>(null)
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <View style={{ zIndex: 3 }}>
         <Dropdown
@@ -59,7 +60,7 @@ const _3DropDown = () => {
         {`<Dropdown\n\tlabel="With Searchable"\n\tsearchable\n\trequired\n\tbold\n\toptions={options}\n\tvalue={v2}\n\tonChange={setV2}\n/>`}
       </CodeHighLighter>
       <View className="h-10" />
-    </ScrollView>
+    </PageContainer>
   )
 }
 

@@ -1,9 +1,10 @@
-import { View, ScrollView } from 'react-native'
+import { View } from 'react-native'
 import React, { useMemo, useState } from 'react'
 import Label from '@/components/Label'
 import { Layout } from '@/components/Layout'
 import Dropdown from '@/components/Dropdown'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import PageContainer from '@/layout/PageContainer'
 
 const Box = () => (
   <View className="h-24 my-4 w-full border-[1px] border-[#ccc] bg-gray-200" />
@@ -40,7 +41,7 @@ const _9Layout = () => {
   }, [itemLength])
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <View className="z-10">
         <Dropdown
@@ -169,7 +170,7 @@ const _9Layout = () => {
         ))}
       </Layout.Wrapper>
       <View className="h-10" />
-    </ScrollView>
+    </PageContainer>
   )
 }
 

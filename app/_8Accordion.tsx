@@ -1,15 +1,16 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text } from 'react-native'
 import React, { useState } from 'react'
 import Accordion from '@/components/Accordion'
 import Button from '@/components/Button'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import PageContainer from '@/layout/PageContainer'
 
 const _8Accordion = () => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />
@@ -47,7 +48,7 @@ const _8Accordion = () => {
         {`<Accordion id="1" hide={!isExpanded}>\n\t<Text>{content}</Text>\n</Accordion>`}
       </CodeHighLighter>
       <View className="h-10" />
-    </ScrollView>
+    </PageContainer>
   )
 }
 

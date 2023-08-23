@@ -1,16 +1,17 @@
-import { View, ScrollView } from 'react-native'
+import { View } from 'react-native'
 import React, { useState } from 'react'
 import { LoadingSpinnerOverlay } from '@/components/LoadingSpinnerOverlay'
 import Label from '@/components/Label'
 import Button from '@/components/Button'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import PageContainer from '@/layout/PageContainer'
 
 const _7LoadingSpinnerOverlay = () => {
   const [isShow1, setIsShow1] = useState(false)
   const [isShow2, setIsShow2] = useState(false)
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
+    <PageContainer>
       <LoadingSpinnerOverlay visible={isShow1} />
       <LoadingSpinnerOverlay
         visible={isShow2}
@@ -52,7 +53,7 @@ const _7LoadingSpinnerOverlay = () => {
         {`<LoadingSpinnerOverlay\n\tvisible={isShow}\n\ttext="Creating profile..."\n\tbackgroundColor="green"\n\ttextColor="red"\n\tspinnerColor="pink"\n/>`}
       </CodeHighLighter>
       <View className="h-10" />
-    </ScrollView>
+    </PageContainer>
   )
 }
 
