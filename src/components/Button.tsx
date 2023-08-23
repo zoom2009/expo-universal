@@ -72,7 +72,7 @@ const Button = memo((props: IButtonProps) => {
         containerClassName,
         backgroundColor || _backgroundColor,
         borderColor || _borderColor,
-        'border-2 h-[50px] self-center rounded-full justify-center items-center flex-row',
+        'border-2 h-[50px] self-start rounded-full justify-center items-center flex-row',
         isFull && 'w-full',
       ])}
     >
