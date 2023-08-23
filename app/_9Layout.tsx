@@ -29,7 +29,7 @@ const itemLengthOptions = [
 ]
 
 const _9Layout = () => {
-  const [itemLength, setItemLength] = useState('2')
+  const [itemLength, setItemLength] = useState('4')
 
   const items = useMemo(() => {
     const result = []
@@ -52,6 +52,8 @@ const _9Layout = () => {
           value={itemLength}
         />
       </View>
+      <View className="h-4" />
+      <Label bold required>Layout Will Responsive Layout by component name</Label>
       <View className="h-4" />
       <CodeHighLighter language="typescript">
         {`// Wrapping with Layout.Wrapper and child with Layout.<Custom>`}
