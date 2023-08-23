@@ -46,7 +46,6 @@ const _9Layout = () => {
         <Dropdown
           label="Item Length"
           bold
-          required
           options={itemLengthOptions}
           onChange={setItemLength}
           value={itemLength}

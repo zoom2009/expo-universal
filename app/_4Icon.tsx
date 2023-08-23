@@ -14,7 +14,7 @@ const _4Icon = () => {
         {`// typing <Icon. this will be auto complete list of icons`}
       </CodeHighLighter>
       <View className="h-8" />
-      <Label required bold>Basic</Label>
+      <Label bold>Basic</Label>
       <View className="h-4" />
       <View className="flex flex-row items-center flex-wrap gap-4">
         <Icon.Activity size={36} color="red" />
@@ -28,7 +28,7 @@ const _4Icon = () => {
         {`<Icon.Activity size={28} color="red" />`}
       </CodeHighLighter>
       <View className="h-8" />
-      <Label required bold>With Weight</Label>
+      <Label bold>With Weight</Label>
       <View className="h-4" />
       <View className="flex flex-row items-center flex-wrap gap-4">
         <Icon.Activity weight="fill" size={36} color="red" />

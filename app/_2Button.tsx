@@ -17,7 +17,6 @@ const _2Button = () => {
         <Dropdown
           label="Button Type"
           bold
-          required
           options={buttonTypeOptions.map((t: string) => ({ label: t, value: t }))}
           onChange={setButtonType}
           value={buttonType}

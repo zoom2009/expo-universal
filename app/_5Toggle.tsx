@@ -23,7 +23,6 @@ const _5Toggle = () => {
         <Dropdown
           label="Toggle Type"
           bold
-          required
           options={[{ label: 'radio', value: 'radio' }, { label: 'checkbox', value: 'checkbox' }]}
           onChange={(v) => {
             setT0(false)
@@ -36,8 +35,8 @@ const _5Toggle = () => {
       <View className="h-8" />
       <Toggle
         label={`Basic (${type})`}
-        required
         bold
+        required
         type={type as 'radio' | 'checkbox'}
         value={t0}
         onToggle={setT0}

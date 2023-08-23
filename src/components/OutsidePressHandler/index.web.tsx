@@ -7,7 +7,7 @@ export const EventProvider = Fragment
 export const OutsidePressHandler = (props: IOutsidePressHandlerProps) => {
   const { children, onOutside } = props
   return (
-    <_OutsidePressHandler onOutsideClick={onOutside}>
+    <_OutsidePressHandler display="contents" onOutsideClick={onOutside}>
       {children}
     </_OutsidePressHandler>
   )

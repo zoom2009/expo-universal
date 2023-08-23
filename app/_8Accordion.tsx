@@ -11,7 +11,7 @@ const _8Accordion = () => {
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1, padding: '2.5%' }}>
       <View className="h-2" />
-      <Label required bold>Basic</Label>
+      <Label bold>Basic</Label>
       <View className="h-4" />
       <Button
         text={isExpanded ? 'Show Less' : 'Show More'}

@@ -20,7 +20,7 @@ const _7LoadingSpinnerOverlay = () => {
         spinnerColor="pink"
       />
       <View className="h-2" />
-      <Label required bold>Basic</Label>
+      <Label bold>Basic</Label>
       <View className="h-4" />
       <Button
         text="Show Loading Basic"
@@ -37,7 +37,7 @@ const _7LoadingSpinnerOverlay = () => {
       <View className="h-10" />
       <View className="w-full h-[1px] bg-[#999]" />
       <View className="h-10" />
-      <Label required bold>Custom Styles</Label>
+      <Label bold>Custom Styles</Label>
       <View className="h-4" />
       <Button
         text="Show Loading Custom"

@@ -42,6 +42,7 @@ export default function Layout() {
         <Drawer.Screen name="_7LoadingSpinnerOverlay" options={{ title: 'LoadingSpinnerOverlay' }} />
         <Drawer.Screen name="_8Accordion" options={{ title: 'Accordion' }} />
         <Drawer.Screen name="_9Layout" options={{ title: 'Resposive Layout' }} />
+        <Drawer.Screen name="_10OutsidePressHandler" options={{ title: 'OutsidePressHandler' }} />
       </Drawer>
     </EventProvider>
   )

@@ -33,7 +33,7 @@ const _6Alert = () => {
         {`// This Alert component using react-native-awesome-alerts lib.`}
       </CodeHighLighter>
       <View className="h-8" />
-      <Label required bold>Basic</Label>
+      <Label bold>Basic</Label>
       <View className="h-4" />
       <Button
         text="Show Alert"
