@@ -15,7 +15,7 @@ interface IToggleSingleProps {
   label?: string
   bold?: boolean
   required?: boolean
-  multiple: false | undefined
+  multiple?: false | undefined
   value: boolean
   onToggle: (value: boolean) => void
 }
@@ -85,7 +85,13 @@ const Toggle = (props: IToggleSingleProps | IToggleMultipleProps) => {
   } = props
 
   const onToggleSingle = ({  value: _v, label: _l  }: IOnToggleProps) => () => {
-    onToggle(!_v as any)
+    if (type === 'checkbox') {
+      onToggle(!_v as any)
+    } else {
+      if (_v === false) {
+        onToggle(!_v as any)
+      }
+    }
   }
 
   const onToggleMultiple = ({ value: _v, label: _l }: IOnToggleProps) => () => {
@@ -130,7 +136,7 @@ const Toggle = (props: IToggleSingleProps | IToggleMultipleProps) => {
   )
 
   return (
-    <WithLabel label={label}>
+    <WithLabel label={label} bold={bold} required={required}>
       <SingleToggle
         type={type}
         label={label}
