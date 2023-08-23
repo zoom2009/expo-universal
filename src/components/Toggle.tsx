@@ -5,6 +5,7 @@ import WithLabel from '@/components/Hoc/WithLabel'
 import cn from '@/utilities/cn'
 import { Icon } from '@/components/Icon'
 import theme from '@/utilities/theme'
+import { ACTIVE_OPACITY } from '@/components/Button'
 
 export type TValue = { label?: string, value: boolean }
 type TType = 'radio' | 'checkbox'
@@ -47,7 +48,7 @@ const SingleToggle = (props: ISingleToggle) => {
 
   return (
     <TouchableOpacity
-      activeOpacity={0.6}
+      activeOpacity={ACTIVE_OPACITY}
       onPress={onToggleFunction}
       className={cn([
         'flex flex-row items-center self-start',

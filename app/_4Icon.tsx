@@ -3,6 +3,7 @@ import React from 'react'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import { Icon } from '@/components/Icon'
 import Label from '@/components/Label'
+import { ACTIVE_OPACITY } from '@/components/Button'
 
 const _4Icon = () => {
   return (
@@ -43,7 +44,7 @@ const _4Icon = () => {
       </CodeHighLighter>
       <TouchableOpacity
         onPress={() => Linking.openURL('https://phosphoricons.com/')}
-        activeOpacity={0.6}
+        activeOpacity={ACTIVE_OPACITY}
         className="mt-8 px-2"
       >
         <Text className="text-lg font-bold text-blue-400">See all icons.</Text>

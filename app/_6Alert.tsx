@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity, Linking } from 'react-native'
 import React, { useState } from 'react'
 import { Alert } from '@/components/Alert'
-import Button from '@/components/Button'
+import Button, { ACTIVE_OPACITY } from '@/components/Button'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 
@@ -50,7 +50,7 @@ const _6Alert = () => {
       </CodeHighLighter>
       <TouchableOpacity
         onPress={() => Linking.openURL('https://github.com/rishabhbhatia/react-native-awesome-alerts')}
-        activeOpacity={0.6}
+        activeOpacity={ACTIVE_OPACITY}
         className="mt-8 px-2"
       >
         <Text className="text-lg font-bold text-blue-400">More Info About Alert Lib.</Text>

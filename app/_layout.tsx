@@ -5,20 +5,12 @@ import { Drawer } from 'expo-router/drawer'
 import * as SplashScreen from 'expo-splash-screen'
 import { useFonts, CourierPrime_400Regular } from '@expo-google-fonts/courier-prime'
 import { EventProvider } from '@/components/OutsidePressHandler'
-import { LogBox } from 'react-native'
-
 import 'react-native-reanimated'
 import 'react-native-gesture-handler'
-LogBox.ignoreAllLogs()
 
-if (Platform.OS === 'web') {
-  // @ts-ignore
-  global._frameTimestamp = null
-}
-
-NativeWindStyleSheet.setOutput({
-  default: 'native',
-})
+// @ts-ignore
+Platform.OS === 'web' && (global._frameTimestamp = null)
+NativeWindStyleSheet.setOutput({ default: 'native' })
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({ Courier: CourierPrime_400Regular })
@@ -43,6 +35,7 @@ export default function Layout() {
         <Drawer.Screen name="_8Accordion" options={{ title: 'Accordion' }} />
         <Drawer.Screen name="_9Layout" options={{ title: 'Resposive Layout' }} />
         <Drawer.Screen name="_10OutsidePressHandler" options={{ title: 'OutsidePressHandler' }} />
+        <Drawer.Screen name="_11Skeleton" options={{ title: 'Skeleton' }} />
       </Drawer>
     </EventProvider>
   )
