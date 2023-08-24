@@ -42,6 +42,7 @@ export default function Layout() {
         <Drawer.Screen name="_12Lottie" options={{ title: 'Lottie' }} />
         <Drawer.Screen name="_13Alert" options={{ title: 'Alert' }} />
         <Drawer.Screen name="_14MapPicker" options={{ title: 'MapPicker' }} />
+        <Drawer.Screen name="_15ScrollTo" options={{ title: 'ScrollTo (scroll to element)' }} />
       </Drawer>
     </EventProvider>
   )
