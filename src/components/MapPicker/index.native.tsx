@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { View } from 'react-native'
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import * as Location from 'expo-location'
@@ -6,15 +6,22 @@ import * as R from 'ramda'
 import { GoogleAutoComplete } from 'react-native-google-autocomplete'
 import { isEmpty } from '@/utilities/validate'
 import Dropdown from '@/components/Dropdown'
-import Input from '@/components/Input'
 import { IMapPickerProps } from './interface'
 
 export const MapPicker = (props: IMapPickerProps) => {
-  const { defaultLocation, googleMapsApiKey, onChange, value } = props
+  const {
+    placeholder,
+    searchPlaceholder,
+    defaultLocation,
+    googleMapsApiKey,
+    onChange,
+    value,
+    width = '100%',
+    height = 450,
+  } = props
+
   const [center, setCenter] = useState({ lat: defaultLocation.lat, lng: defaultLocation.lng })
   const [marker, setMarker] = useState({ lat: defaultLocation.lat, lng: defaultLocation.lng })
-  const [typeLat, setTypeLat] = useState('')
-  const [typeLng, setTypeLng] = useState('')
   const [isReady, setIsReady] = useState(false)
   const [dropdownSelected, setDropdownSelected] = useState<any>(undefined)
 
@@ -54,28 +61,6 @@ export const MapPicker = (props: IMapPickerProps) => {
     onChange && onChange({ lat, lng })
   }
 
-  const typeRef = useRef({})
-  const onTypeLocation = (type: 'lat' | 'lng') => (value: string) => {
-    if (typeRef.current) clearTimeout(typeRef.current as any)
-    typeRef.current = setTimeout(() => {
-      if (type === 'lat') {
-        const v = { lat: +value, lng: +(typeLng || 0) }
-        setTypeLat(value)
-        setCenter(v)
-        setMarker(v)
-        onChange && onChange(v)
-      } else if (type === 'lng') {
-        const v = { lat: +(typeLat || 0), lng: +value }
-        setTypeLng(value)
-        setCenter(v)
-        setMarker(v)
-        onChange && onChange(v)
-      }
-    }, 500)
-  }
-
-  const transformOnChangeLocationText = (text: string) => text.replace(/[^0-9.]/g, '')
-
   useEffect(() => {
     requestPermission()
   }, [])
@@ -88,28 +73,7 @@ export const MapPicker = (props: IMapPickerProps) => {
   }, [value])
 
   return (
-    <View className="w-full mt-4">
-      <View className="flex flex-1 flex-row items-center">
-        <View className="flex flex-1">
-          <Input
-            value={typeLat}
-            label="ละติจูด"
-            placeholder="ระบุละติจูด"
-            transformOnChange={transformOnChangeLocationText}
-            onChangeEffect={onTypeLocation('lat')}
-          />
-        </View>
-        <View className="w-4" />
-        <View className="flex flex-1">
-          <Input
-            value={typeLng}
-            label="ลองติจูด"
-            placeholder="ระบุลองติจูด"
-            transformOnChange={transformOnChangeLocationText}
-            onChangeEffect={onTypeLocation('lng')}
-          />
-        </View>
-      </View>
+    <View className="w-full">
       <GoogleAutoComplete
         apiKey={googleMapsApiKey}
         debounce={300}
@@ -139,24 +103,25 @@ export const MapPicker = (props: IMapPickerProps) => {
           }
 
           return (
-            <View className="mt-6 z-10">
+            <View className="z-10">
               <Dropdown
                 value={dropdownSelected}
                 searchable
                 onChangeSearchText={handleTextChange}
                 onChange={onSelectLocation}
                 options={!isEmpty(inputValue) ? options : []}
-                placeholder="ค้นหาสถานที่"
+                placeholder={placeholder}
+                searchPlaceholder={searchPlaceholder}
               />
             </View>
           )
         }}
       </GoogleAutoComplete>
-      <View style={{ marginTop: 20, width: '100%', height: 450, alignItems: 'center' }}>
+      <View style={{ marginTop: 20, width, height, alignItems: 'center' } as any}>
         <MapView
           onMapReady={onMapReady}
           provider={PROVIDER_GOOGLE}
-          style={{ width: '100%', height: 450, borderRadius: 10 }}
+          style={{ width: '100%', height, borderRadius: 10 } as any}
           region={isReady ? {
             latitude: center.lat,
             longitude: center.lng,

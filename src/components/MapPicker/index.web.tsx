@@ -3,19 +3,24 @@ import { View } from 'react-native'
 import { StandaloneSearchBox, LoadScript, GoogleMap, Marker } from '@react-google-maps/api'
 import { useGeolocated } from 'react-geolocated'
 import * as R from 'ramda'
-import Input from '@/components/Input'
 import { isEmpty } from '@/utilities/validate'
 import { IMapPickerProps } from './interface'
 
 export const MapPicker = (props: IMapPickerProps) => {
-  const { defaultLocation, googleMapsApiKey, onChangeEffect, value } = props
+  const {
+    defaultLocation,
+    googleMapsApiKey,
+    onChange,
+    searchPlaceholder,
+    placeholder,
+    value,
+    height = 450,
+    width = '100%',
+  } = props
+
   const [center, setCenter] = useState({ lat: defaultLocation.lat, lng: defaultLocation.lng })
   const [marker, setMarker] = useState({ lat: defaultLocation.lat, lng: defaultLocation.lng })
 
-  const [typeLat, setTypeLat] = useState('')
-  const [typeLng, setTypeLng] = useState('')
-
-  // const { coords, isGeolocationAvailable, isGeolocationEnabled } = useGeolocated({}) <Maybe will use later>
   useGeolocated({
     positionOptions: { enableHighAccuracy: false },
     userDecisionTimeout: 10000,
@@ -28,12 +33,11 @@ export const MapPicker = (props: IMapPickerProps) => {
         const currentLocation = { lat: coords.latitude, lng: coords.longitude }
         setCenter(currentLocation)
         setMarker(currentLocation)
-        onChangeEffect && onChangeEffect(currentLocation)
+        onChange && onChange(currentLocation)
       }
     },
     onError: () => {
-      // alert('ไม่สามารถขอที่อยู่ Location ได้')
-      console.log('ไม่สามารถขอที่อยู่ Location ได้')
+      console.log('cannot request current location!')
     },
   })
 
@@ -45,7 +49,7 @@ export const MapPicker = (props: IMapPickerProps) => {
     const lng = (R.pathOr(() => {}, [0, 'geometry', 'location', 'lng'], places)()) as any
     setCenter({ lat, lng })
     setMarker({ lat, lng })
-    onChangeEffect && onChangeEffect({ lat, lng })
+    onChange && onChange({ lat, lng })
   }
 
   const onDblClick = ({ latLng }: any) => {
@@ -53,62 +57,19 @@ export const MapPicker = (props: IMapPickerProps) => {
     const lat = latFn()
     const lng = lngFn()
     setMarker({ lat, lng })
-    onChangeEffect && onChangeEffect({ lat, lng })
+    onChange && onChange({ lat, lng })
   }
-
-  const onTypeLocation = (type: 'lat' | 'lng') => (value: string) => {
-    if (!isEmpty(value)) {
-      if (type === 'lat') {
-        const v = { lat: +value, lng: +(typeLng || 0) }
-        setTypeLat(value)
-        setCenter(v)
-        setMarker(v)
-        onChangeEffect && onChangeEffect(v)
-      } else if (type === 'lng') {
-        const v = { lat: +(typeLat || 0), lng: +value }
-        setTypeLng(value)
-        setCenter(v)
-        setMarker(v)
-        onChangeEffect && onChangeEffect(v)
-      }
-    }
-  }
-
-  const transformOnChangeLocationText = (text: string) => text.replace(/[^0-9.]/g, '')
 
   useEffect(() => {
     if (value) {
       setCenter({ lat: value.lat, lng: value.lng })
       setMarker({ lat: value.lat, lng: value.lng })
-      setTypeLat(`${value.lat}`)
-      setTypeLng(`${value.lng}`)
     }
   }, [value])
 
   return (
-    <View className="w-full mt-8">
-      <View className="flex flex-1 flex-row items-center flex-wrap">
-        <View className="flex flex-1">
-          <Input
-            value={typeLat}
-            label="ละติจูด"
-            placeholder="ระบุละติจูด"
-            transformOnChange={transformOnChangeLocationText}
-            onChangeEffect={onTypeLocation('lat')}
-          />
-        </View>
-        <View className="w-4" />
-        <View className="flex flex-1">
-          <Input
-            value={typeLng}
-            label="ลองติจูด"
-            placeholder="ระบุลองติจูด"
-            transformOnChange={transformOnChangeLocationText}
-            onChangeEffect={onTypeLocation('lng')}
-          />
-        </View>
-      </View>
-      <View className="w-full h-[450px] mt-6">
+    <View className="w-full">
+      <View style={{ height, width } as any} className="w-full">
         <LoadScript
           id="script-loader"
           googleMapsApiKey={googleMapsApiKey}
@@ -127,7 +88,7 @@ export const MapPicker = (props: IMapPickerProps) => {
             >
               <input
                 type="text"
-                placeholder="พิมพ์เพื่อค้นหา"
+                placeholder={placeholder || searchPlaceholder}
                 style={{
                   boxSizing: `border-box`,
                   border: `1px solid transparent`,

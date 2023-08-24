@@ -40,6 +40,14 @@ const Dropdown = (props: IDropdownProps) => {
   const { width } = useWindowDimensions()
   const [open, setOpen] = useState(false)
 
+  const onChangeFunction = (item: string | Function) => {
+    if (typeof item === 'function') {
+      onChange(item() as string)
+    } else {
+      onChange(item)
+    }
+  }
+
   const onOutside = useCallback(() => {
     open && setOpen(false)
   }, [open])
@@ -63,7 +71,7 @@ const Dropdown = (props: IDropdownProps) => {
           items={options}
           setOpen={setOpen}
           value={value as any}
-          setValue={onChange as any}
+          setValue={onChangeFunction}
           listMode="SCROLLVIEW"
           placeholder={placeholder}
           placeholderStyle={{ color: '#999' }}
