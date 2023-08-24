@@ -16,7 +16,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyA-ByHssW06jGxkBr4T0LfIjE8c8s173SA"
+      }
     },
     "experiments": {
       "tsconfigPaths": true

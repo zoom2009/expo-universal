@@ -1,0 +1,1 @@
+export const GOOGLE_MAP_API_AKY = 'AIzaSyA-ByHssW06jGxkBr4T0LfIjE8c8s173SA'
