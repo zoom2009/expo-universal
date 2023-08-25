@@ -52,6 +52,7 @@ const _2Button = () => {
       />
       <View className="h-4" />
       <CodeHighLighter language="vbscriptHtml">{`<Button\n\tRightIcon={<Icon1 />}\n\tLeftIcon={<Icon2 />}\n\tbold\n\ttype="${buttonType}"\n\tonPress={...}\n\ttext="Bold"\n/>`}</CodeHighLighter>
+      <View className="h-10" />
     </PageContainer>
   )
 }
