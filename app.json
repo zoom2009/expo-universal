@@ -19,7 +19,8 @@
       "supportsTablet": true,
       "config": {
         "googleMapsApiKey": "AIzaSyA-ByHssW06jGxkBr4T0LfIjE8c8s173SA"
-      }
+      },
+      "bundleIdentifier": "com.zoom2009.expouniversal"
     },
     "experiments": {
       "tsconfigPaths": true
@@ -28,7 +29,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.zoom2009.expouniversal"
     },
     "web": {
       "favicon": "./assets/favicon.png",
