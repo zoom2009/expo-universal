@@ -1,5 +1,11 @@
 import { LayoutChangeEvent } from 'react-native'
-import { IScrollToProps } from './interface'
+
+interface IScrollToProps {
+  /** To use this you should call onLayout at view-target for get x, y to get x, y you can use getPositionView fn. */
+  scrollViewRef: any
+  x?: number
+  y?: number
+}
 
 export const scrollTo = (props: IScrollToProps) => {
   const { scrollViewRef, x, y } = props
