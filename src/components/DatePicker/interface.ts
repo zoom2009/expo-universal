@@ -13,4 +13,7 @@ export interface IDatePickerProps {
   error?: string
   onChange: (props: Date) => void
   value: Date | undefined
+  placeholder?: string
+  selectText?: string
+  cancelText?: string
 }

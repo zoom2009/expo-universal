@@ -35,6 +35,9 @@ const DatePicker = (props: IDatePickerProps) => {
     error,
     onChange,
     value,
+    placeholder = 'select date',
+    selectText = 'Select',
+    cancelText = 'Cancel',
   } = props
 
   const insets = getInsets()
@@ -123,7 +126,7 @@ const DatePicker = (props: IDatePickerProps) => {
             value={displayValue}
             error={error}
             onChangeEffect={R.T}
-            placeholder="select date"
+            placeholder={placeholder}
             RightIcon={<Icon.CaretDown color={theme.colors.info} size={26} />}
           />
         </TouchableOpacity>
@@ -166,15 +169,15 @@ const DatePicker = (props: IDatePickerProps) => {
           <View className="h-[80px] border-t-[1px] border-t-[#e9e9e9] mt-[10px] pt-[10px] flex flex-row justify-between px-6">
             <Button
               bold
-              text="ยกเลิก"
               type="primary-outline"
+              text={cancelText}
               onPress={onCancel}
               containerClassName="rounded-md min-w-[120px]"
             />
             <Button
               bold
               disabled={!isCanSelect}
-              text="เลือก"
+              text={selectText}
               type="primary"
               onPress={onSelect}
               containerClassName="rounded-md min-w-[120px]"
