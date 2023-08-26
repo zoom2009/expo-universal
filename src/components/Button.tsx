@@ -19,6 +19,7 @@ interface IButtonProps {
   borderColor?: string
   containerClassName?: string
   isFull?: boolean
+  disabled?: boolean
 }
 
 const getColor = (type: IButtonType) => {
@@ -56,6 +57,7 @@ const Button = memo((props: IButtonProps) => {
     borderColor,
     containerClassName,
     isFull = false,
+    disabled = false,
   } = props
 
   const {
@@ -66,14 +68,16 @@ const Button = memo((props: IButtonProps) => {
 
   return (
     <TouchableOpacity
+      disabled={disabled}
       activeOpacity={ACTIVE_OPACITY}
       onPress={onPress}
       className={cn([
-        containerClassName,
         backgroundColor || _backgroundColor,
         borderColor || _borderColor,
         'border-2 h-[50px] self-start rounded-full justify-center items-center flex-row',
         isFull && 'w-full',
+        containerClassName,
+        disabled && 'bg-disabled border-[#ccc]'
       ])}
     >
       {LeftIcon ? (
@@ -83,7 +87,10 @@ const Button = memo((props: IButtonProps) => {
       ) : (
       <View className="pl-8" />
       )}
-      <Label textClassName={textColor || _textColor} bold={bold}>
+      <Label
+        textClassName={cn([textColor || _textColor, disabled && 'text-[#ccc]'])}
+        bold={bold}
+      >
         {text}
       </Label>
       {RightIcon ? (

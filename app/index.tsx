@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Stack } from 'expo-router'
 
 const Home = () => {

@@ -1,5 +1,5 @@
 import { View, TextInput, KeyboardTypeOptions, Platform } from 'react-native'
-import { ReactNode, useMemo, useState } from 'react'
+import { ReactNode, useEffect, useMemo, useState } from 'react'
 import { MaskedTextInput } from 'react-native-mask-text'
 import Label from '@/components/Label'
 import ErrorMessage from '@/components/ErrorMessage'
@@ -9,6 +9,7 @@ interface IInputProps {
   label?: string
   onChangeEffect: (text: string) => void
   value: string
+  forceHighLight?: boolean
   placeholder?: string
   disabledStyle?: boolean
   disabledInput?: boolean
@@ -58,6 +59,7 @@ const Input = (props: IInputProps) => {
     maskType,
     maskString,
     maskOptions,
+    forceHighLight = false,
   } = props
 
   const [isFocus, setIsFocus] = useState(false)
@@ -92,6 +94,10 @@ const Input = (props: IInputProps) => {
       onChangeEffect(transformedText)
     }
   }
+
+  useEffect(() => {
+    setIsFocus(forceHighLight)
+  }, [forceHighLight])
   
   return (
     <View className="w-full">
