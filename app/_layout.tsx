@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Platform } from 'react-native'
+import { Platform, View } from 'react-native'
 import { NativeWindStyleSheet } from 'nativewind'
 import { Drawer } from 'expo-router/drawer'
 import * as SplashScreen from 'expo-splash-screen'
@@ -7,6 +7,8 @@ import { useFonts, CourierPrime_400Regular } from '@expo-google-fonts/courier-pr
 import { EventProvider } from '@/components/OutsidePressHandler'
 import * as ScreenOrientation from 'expo-screen-orientation'
 import { ToastRootProvider } from '@/components/Toast'
+import { DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
+import { getInsets } from '@/utilities/getInsets'
 
 import 'react-native-reanimated'
 import 'react-native-gesture-handler'
@@ -18,6 +20,7 @@ Platform.OS === 'web' && (global._frameTimestamp = null)
 NativeWindStyleSheet.setOutput({ default: 'native' })
 
 export default function Layout() {
+  const insets = getInsets()
   const [fontsLoaded] = useFonts({ Courier: CourierPrime_400Regular })
 
   useEffect(() => {
@@ -26,10 +29,19 @@ export default function Layout() {
 
   if (!fontsLoaded) return null
 
+  const drawerContent = (props: DrawerContentComponentProps) => {
+    return (
+      <DrawerContentScrollView {...props}>
+        <DrawerItemList {...props} />
+        <View style={{ height: insets.bottom }} />
+      </DrawerContentScrollView>
+    )
+  }
+
   return (
     <EventProvider>
       <ToastRootProvider>
-        <Drawer>
+        <Drawer drawerContent={drawerContent}>
           <Drawer.Screen name="index" options={{ title: 'Home' }} />
           <Drawer.Screen name="_1Label" options={{ title: 'Label' }} />
           <Drawer.Screen name="_2Button" options={{ title: 'Button' }} />
@@ -52,6 +64,7 @@ export default function Layout() {
           <Drawer.Screen name="_19ImagePicker" options={{ title: 'ImagePicker' }} />
           <Drawer.Screen name="_20FilePicker" options={{ title: 'FilePicker' }} />
           <Drawer.Screen name="_21Pagination" options={{ title: 'Pagination' }} />
+          <Drawer.Screen name="_22ImageCarousel" options={{ title: 'ImageCarousel' }} />
         </Drawer>
       </ToastRootProvider>
     </EventProvider>

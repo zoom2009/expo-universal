@@ -8048,7 +8048,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@*, prop-types@15, prop-types@^15.5.10, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@*, prop-types@15, prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -8316,6 +8316,18 @@ react-native-google-autocomplete@^0.2.0:
     prop-types "^15.7.2"
     query-string "^6.8.1"
 
+react-native-image-pan-zoom@^2.1.12:
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/react-native-image-pan-zoom/-/react-native-image-pan-zoom-2.1.12.tgz#eb98bf56fb5610379bdbfdb63219cc1baca98fd2"
+  integrity sha512-BF66XeP6dzuANsPmmFsJshM2Jyh/Mo1t8FsGc1L9Q9/sVP8MJULDabB1hms+eAoqgtyhMr5BuXV3E1hJ5U5H6Q==
+
+react-native-image-zoom-viewer@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-image-zoom-viewer/-/react-native-image-zoom-viewer-3.0.1.tgz#a2bd5fb3bda15e0686ce88fcde8576726495d7fb"
+  integrity sha512-la6s5DNSuq4GCRLsi5CZ29FPjgTpdCuGIRdO5T9rUrAtxrlpBPhhSnHrbmPVxsdtOUvxHacTh2Gfa9+RraMZQA==
+  dependencies:
+    react-native-image-pan-zoom "^2.1.12"
+
 react-native-maps@1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-1.7.1.tgz#e0b9d68542b4b59b5ca3df375ada7c860fb41f2e"
@@ -8387,6 +8399,13 @@ react-native-svg@13.9.0:
     css-select "^5.1.0"
     css-tree "^1.1.3"
 
+react-native-web-swiper@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/react-native-web-swiper/-/react-native-web-swiper-2.2.4.tgz#41c8d4b16746f8ee325cd74b37392df0bc162cec"
+  integrity sha512-Lq6fgCuVhEzxgWJU5t+wWhCoOfd0jfQ1Qdwyww/Kln4McPXFKQ6MaSuUHltnFOKYHej97R7avPchn+QB1wIFQg==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-native-web@~0.19.6:
   version "0.19.7"
   resolved "https://registry.yarnpkg.com/react-native-web/-/react-native-web-0.19.7.tgz#feac895c1390c91072cbfb53272f3bb92227ca3c"
@@ -8413,6 +8432,11 @@ react-native-wheel-scrollview-picker@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-native-wheel-scrollview-picker/-/react-native-wheel-scrollview-picker-2.0.4.tgz#24f387c3a00f477d62d88c00d4189262c51fb328"
   integrity sha512-AL/8jp13duXF3piHpFJ6isqVeGAf9dfWWcmjhHiJc6WkdK/UdI+kNhoCeBLb2yx1gDrki5nHxnR0L22sMfAblw==
+
+react-native-zoom-lightbox@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-zoom-lightbox/-/react-native-zoom-lightbox-1.0.1.tgz#434f3238c34fddd8dc0f871a99eef3aacee31d97"
+  integrity sha512-orPjFMhFII9+J1L89JW6pQN6ucz3ZIf5cebst/hj/uqD2mN59g2eEd9EPgpcKJgeNkmnb4OyDrmu6s56kqLBEA==
 
 react-native@0.72.3:
   version "0.72.3"
