@@ -161,7 +161,7 @@ const DatePicker = (props: IDatePickerProps) => {
               error={error}
               onChangeEffect={R.T}
               placeholder={placeholder}
-              RightIcon={<Icon.CaretDown color={theme.colors.info} size={26} />}
+              RightIcon={<Icon.Calendar weight="fill" color={theme.colors.info} size={26} />}
             />
           </TouchableOpacity>
         </Popover>
