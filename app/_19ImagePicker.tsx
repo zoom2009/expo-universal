@@ -29,7 +29,7 @@ const _19ImagePicker = () => {
       <CodeHighLighter>
         {`<ImagePicker\n\tvalues={images}\n\tonChange={onChangeImages}\n\tmultiple\n\tmaximum={6}\n\tlabel="Choose Images"\n\tbuttonLabel="Press for upload"\n/>`}
       </CodeHighLighter>
-      <View className="h-4" />
+      <View className="h-10" />
       <TouchableOpacity
         onPress={() => Linking.openURL('https://docs.expo.dev/versions/latest/sdk/imagepicker')}
         activeOpacity={ACTIVE_OPACITY}

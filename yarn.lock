@@ -8048,7 +8048,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@*, prop-types@15, prop-types@^15.5.10, prop-types@^15.7.2:
+prop-types@*, prop-types@15, prop-types@^15.5.10, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -8471,6 +8471,13 @@ react-refresh@^0.4.0:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.3.tgz#966f1750c191672e76e16c2efa569150cc73ab53"
   integrity sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==
+
+react-responsive-pagination@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-responsive-pagination/-/react-responsive-pagination-2.2.2.tgz#6aac3e74b9ce3bbf9914dd685020c86cfa1158f7"
+  integrity sha512-Qj2enEBS9UJLmADYHsP/VyX60pq2whIo8SIESnyOgMsLIZ9+QjuasO08P6Dt/kWnl3tEqTNd3YwbLL7HaKcj4Q==
+  dependencies:
+    prop-types "^15.8.1"
 
 react-shallow-renderer@^16.15.0:
   version "16.15.0"

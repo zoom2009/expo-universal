@@ -51,6 +51,7 @@ export default function Layout() {
           <Drawer.Screen name="_18MenuPicker" options={{ title: 'MenuPicker' }} />
           <Drawer.Screen name="_19ImagePicker" options={{ title: 'ImagePicker' }} />
           <Drawer.Screen name="_20FilePicker" options={{ title: 'FilePicker' }} />
+          <Drawer.Screen name="_21Pagination" options={{ title: 'Pagination' }} />
         </Drawer>
       </ToastRootProvider>
     </EventProvider>
