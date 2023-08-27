@@ -8,7 +8,7 @@ import Button from '@/components/Button'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 
-const _19MenuPicker = () => {
+const _18MenuPicker = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   const onOpenMenu = () => setIsOpenMenu(true)
   const onCloseMenu = () => setIsOpenMenu(false)
@@ -53,4 +53,4 @@ const _19MenuPicker = () => {
   )
 }
 
-export default _19MenuPicker
+export default _18MenuPicker

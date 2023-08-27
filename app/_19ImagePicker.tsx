@@ -7,7 +7,7 @@ import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import { ACTIVE_OPACITY } from '@/components/Button'
 
-const _18ImagePicker = () => {
+const _19ImagePicker = () => {
   const [images, setImages] = useState<any>([])
   const onChangeImages = (images: ImagePickerResult) => {
     setImages(images.assets)
@@ -53,4 +53,4 @@ const _18ImagePicker = () => {
   )
 }
 
-export default _18ImagePicker
+export default _19ImagePicker
