@@ -20,6 +20,7 @@ interface IButtonProps {
   containerClassName?: string
   isFull?: boolean
   disabled?: boolean
+  textClassName?: string
 }
 
 const getColor = (type: IButtonType) => {
@@ -56,6 +57,7 @@ const Button = memo((props: IButtonProps) => {
     backgroundColor,
     borderColor,
     containerClassName,
+    textClassName,
     isFull = false,
     disabled = false,
   } = props
@@ -88,7 +90,7 @@ const Button = memo((props: IButtonProps) => {
       <View className="pl-8" />
       )}
       <Label
-        textClassName={cn([textColor || _textColor, disabled && 'text-[#ccc]'])}
+        textClassName={cn([textColor || _textColor, disabled && 'text-[#ccc]', textClassName])}
         bold={bold}
       >
         {text}

@@ -48,6 +48,8 @@ export default function Layout() {
           <Drawer.Screen name="_15ScrollTo" options={{ title: 'ScrollTo (scroll to element)' }} />
           <Drawer.Screen name="_16DatePicker" options={{ title: 'DatePicker' }} />
           <Drawer.Screen name="_17Toast" options={{ title: 'Toast' }} />
+          <Drawer.Screen name="_18ImagePicker" options={{ title: 'ImagePicker' }} />
+          <Drawer.Screen name="_19MenuPicker" options={{ title: 'MenuPicker' }} />
         </Drawer>
       </ToastRootProvider>
     </EventProvider>

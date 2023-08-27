@@ -47,4 +47,7 @@ interface ITheme {
 // @ts-ignore
 const theme: ITheme = fullConfig.theme
 
-export default theme
+export default {
+  ...theme,
+  backdropColor: 'rgba(0, 0, 0, 0.5)',
+}

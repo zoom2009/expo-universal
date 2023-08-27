@@ -1,3 +1,4 @@
+import theme from '@/utilities/theme'
 import { Modal, ActivityIndicator, View, Text } from 'react-native'
 
 interface ILoadingSpinnerOverlayProps {
@@ -12,7 +13,7 @@ export const LoadingSpinnerOverlay = (props: ILoadingSpinnerOverlayProps) => {
   const { 
     visible = false,
     text,
-    backgroundColor = 'rgba(0, 0, 0, 0.5)',
+    backgroundColor = theme.backdropColor,
     textColor = 'white',
     spinnerColor = 'white',
   } = props
