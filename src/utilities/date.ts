@@ -69,6 +69,8 @@ export const getDayList = () => ['1', '2', '3', '4', '5', '6', '7', '8', '9', '1
 
 export const getMonthList = () => d().localeData().monthsShort()
 
+export const getFullMonthList = () => d().localeData().months()
+
 export const getCurrentYear = () => +d().year() + (IS_THAI_DATE ? 543 : 0)
 
 export const isValidDate = (d: string, m: string, y: string) => {
