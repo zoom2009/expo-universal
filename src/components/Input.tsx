@@ -121,7 +121,7 @@ const Input = (props: IInputProps) => {
         <InputComponent
           {...otherProps}
           className={cn([
-            'w-full p-4 rounded-md text-sm md:text-md flex-1 border-0',
+            'w-full p-4 rounded-md text-sm md:text-md flex-1 border-0 bg-white',
             disabledStyle && 'text-muted',
             isTextArea && 'h-32',
           ])}

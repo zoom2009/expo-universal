@@ -41,7 +41,7 @@ export default function Layout() {
   return (
     <EventProvider>
       <ToastRootProvider>
-        <Drawer drawerContent={drawerContent}>
+        <Drawer drawerContent={drawerContent} screenOptions={{ drawerStyle: { width: 300 } }}>
           <Drawer.Screen name="index" options={{ title: 'Home' }} />
           <Drawer.Screen name="_1Label" options={{ title: 'Label' }} />
           <Drawer.Screen name="_2Button" options={{ title: 'Button' }} />
@@ -65,6 +65,7 @@ export default function Layout() {
           <Drawer.Screen name="_20FilePicker" options={{ title: 'FilePicker' }} />
           <Drawer.Screen name="_21Pagination" options={{ title: 'Pagination' }} />
           <Drawer.Screen name="_22ImageCarousel" options={{ title: 'ImageCarousel' }} />
+          <Drawer.Screen name="_23ThaiAddressAutoCompletePicker" options={{ title: 'ThaiAddressAutoCompletePicker' }} />
         </Drawer>
       </ToastRootProvider>
     </EventProvider>

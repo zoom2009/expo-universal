@@ -45,6 +45,7 @@ export default CodeHighLighter
 
 const styles = StyleSheet.create({
   containerStyle: {
+    width: '100%',
     padding: 12,
   },
   text: {

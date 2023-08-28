@@ -8522,6 +8522,11 @@ react-syntax-highlighter@15.5.0, react-syntax-highlighter@^15.5.0:
     prismjs "^1.27.0"
     refractor "^3.6.0"
 
+react-thai-address@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-thai-address/-/react-thai-address-1.0.6.tgz#8309b0972e4227c1bb5d2022160d01b60f94be1b"
+  integrity sha512-KJtZK24e0663G5K7VEgmZamRn7bpUfZmxELFxS/KH45xBmWAIkKzBAEnfBFZqajxJNa1u2yN1TvMajSLm+/x5g==
+
 react-tiny-popover@^7.2.4:
   version "7.2.4"
   resolved "https://registry.yarnpkg.com/react-tiny-popover/-/react-tiny-popover-7.2.4.tgz#b11fe9b43d1fc8ac46e760419346afd41d6111ee"

@@ -6,6 +6,7 @@ import { Icon } from '@/components/Icon'
 import theme from '@/utilities/theme'
 import { useWindowDimensions } from 'react-native'
 import getViewPortType from '@/utilities/getViewPortType'
+import { isEmpty } from '@/utilities/validate'
 
 export type TOption = { label: string, value: string }
 
@@ -70,14 +71,14 @@ const Dropdown = (props: IDropdownProps) => {
           open={open}
           items={options}
           setOpen={setOpen}
-          value={value as any}
+          value={value}
           setValue={onChangeFunction}
           listMode="SCROLLVIEW"
           placeholder={placeholder}
           placeholderStyle={{ color: '#999' }}
           ArrowUpIconComponent={ArrowUpIconComponent}
           ArrowDownIconComponent={ArrowDownIconComponent}
-          style={{ borderColor: !open ? '#555' : theme.colors.info }}
+          style={{ borderColor: !isEmpty(error) ? theme.colors.danger : !open ? '#555' : theme.colors.info }}
           labelStyle={{ fontSize }}
           dropDownContainerStyle={{ borderColor: theme.colors.info }}
           searchTextInputStyle={{ borderColor: theme.colors.info, height: 40 }}

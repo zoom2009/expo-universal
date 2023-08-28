@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Modal, ImageSourcePropType, TouchableOpacity } from 'react-native'
+import { View, Modal, TouchableOpacity } from 'react-native'
 import { ACTIVE_OPACITY } from '@/components/Button'
 import { Icon } from '@/components/Icon'
 import { getInsets } from '@/utilities/getInsets'
@@ -12,7 +12,6 @@ interface IImageZoomProps {
   onClose: () => void
   images?: IImageInfo[]
 }
-
 
 const ImageZoom = (props: IImageZoomProps) => {
   const {
