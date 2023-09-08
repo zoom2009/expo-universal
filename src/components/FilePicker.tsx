@@ -7,7 +7,7 @@ import Button, { ACTIVE_OPACITY } from '@/components/Button'
 import theme from '@/utilities/theme'
 import * as DocumentPicker from 'expo-document-picker'
 import { getInsets } from '@/utilities/getInsets'
-import PdfView from './PdfView'
+import PdfView from '@/components/PdfView'
 
 interface IFilePickerProps {
   multiple?: boolean
