@@ -66,6 +66,9 @@ export default function Layout() {
           <Drawer.Screen name="_21Pagination" options={{ title: 'Pagination' }} />
           <Drawer.Screen name="_22ImageCarousel" options={{ title: 'ImageCarousel' }} />
           <Drawer.Screen name="_23ThaiAddressAutoCompletePicker" options={{ title: 'ThaiAddressAutoCompletePicker' }} />
+          <Drawer.Screen name="_24FullModal" options={{ title: 'Modal & FullModal' }} />
+          <Drawer.Screen name="_25CameraPicker" options={{ title: 'Camera Picker' }} />
+          <Drawer.Screen name="_26Table" options={{ title: 'Table' }} />
         </Drawer>
       </ToastRootProvider>
     </EventProvider>
