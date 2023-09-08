@@ -42,7 +42,7 @@ export default function Layout() {
     <EventProvider>
       <ToastRootProvider>
         <Drawer drawerContent={drawerContent} screenOptions={{ drawerStyle: { width: 300 } }}>
-          <Drawer.Screen name="index" options={{ title: 'Home' }} />
+          <Drawer.Screen name="index" options={{ title: 'Welcome' }} />
           <Drawer.Screen name="_1Label" options={{ title: 'Label' }} />
           <Drawer.Screen name="_2Button" options={{ title: 'Button' }} />
           <Drawer.Screen name="_3Dropdown" options={{ title: 'Dropdown' }} />
