@@ -1,5 +1,5 @@
 import React from 'react'
-import { Platform, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import CodeHighlighter from 'react-native-code-highlighter'
 import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import theme from '@/utilities/theme'
@@ -21,15 +21,17 @@ const CodeHighLighter = (props: ICodeHighLighterProps) => {
   }
 
   return (
-    <View className="flex flex-col relative">
-      <CodeHighlighter
-        hljsStyle={atomOneLight}
-        textStyle={styles.text}
-        language={language}
-        containerStyle={styles.containerStyle}
-      >
-        {children}
-      </CodeHighlighter>
+    <View className="flex flex-col relative w-full bg-white">
+      <Text selectable style={{ width: '100%' }}>
+        <CodeHighlighter
+          hljsStyle={atomOneLight}
+          textStyle={styles.text}
+          language={language}
+          containerStyle={styles.containerStyle}
+        >
+          {children}
+        </CodeHighlighter>
+      </Text>
       <TouchableOpacity
         activeOpacity={ACTIVE_OPACITY}
         className="absolute bottom-0 right-0 z-10 p-2.5"
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
   containerStyle: {
     width: '100%',
     padding: 12,
+    backgroundColor: 'white',
   },
   text: {
     fontSize: (Platform.OS === 'android' || Platform.OS === 'ios') ? 14.5 : 17.5
