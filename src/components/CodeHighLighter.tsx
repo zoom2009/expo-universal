@@ -4,8 +4,8 @@ import CodeHighlighter from 'react-native-code-highlighter'
 import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import theme from '@/utilities/theme'
 import * as Clipboard from 'expo-clipboard'
-import { Icon } from './Icon'
-import { ACTIVE_OPACITY } from './Button'
+import { Icon } from '@/components/Icon'
+import { ACTIVE_OPACITY } from '@/components/Button'
 
 interface ICodeHighLighterProps {
   children: string
