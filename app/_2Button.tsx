@@ -7,12 +7,14 @@ import { buttonType as buttonTypeOptions } from '@/constants/buttonType'
 import Label from '@/components/Label'
 import { Icon } from '@/components/Icon'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _2Button = () => {
   const [buttonType, setButtonType] = useState<string>('danger')
 
   return (
     <PageContainer>
+      <Head><title>Button</title></Head>
       <View className="h-2" />
       <View className="z-10">
         <Dropdown

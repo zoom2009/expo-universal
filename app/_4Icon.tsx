@@ -5,10 +5,12 @@ import { Icon } from '@/components/Icon'
 import Label from '@/components/Label'
 import { ACTIVE_OPACITY } from '@/components/Button'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _4Icon = () => {
   return (
     <PageContainer>
+      <Head><title>Icon</title></Head>
       <View className="h-2" />
       <Label required bold>NOTE</Label>
       <View className="h-2" />

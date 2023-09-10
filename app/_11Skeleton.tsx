@@ -4,10 +4,12 @@ import { Skeleton } from '@/components/Skeleton'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _11Skeleton = () => {
   return (
     <PageContainer>
+      <Head><title>Skeleton</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

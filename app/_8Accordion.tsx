@@ -5,12 +5,14 @@ import Button from '@/components/Button'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _8Accordion = () => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <PageContainer>
+      <Head><title>Accordion</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

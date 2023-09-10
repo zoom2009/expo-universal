@@ -5,6 +5,7 @@ import { MapPicker } from '@/components/MapPicker'
 import { GOOGLE_MAP_API_AKY } from '@/constants/mockKey'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const defaultLocation = {
   lat: 13.736717,
@@ -16,6 +17,7 @@ const _14MapPicker = () => {
 
   return (
     <PageContainer>
+      <Head><title>MapPicker</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

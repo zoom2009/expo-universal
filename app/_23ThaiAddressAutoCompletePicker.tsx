@@ -4,6 +4,7 @@ import PageContainer from '@/layout/PageContainer'
 import ThaiAddressAutoCompletePicker from '@/components/ThaiAddressAutoCompletePicker'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _23ThaiAddressAutoCompletePicker = () => {
   const [address, setAddress] = useState({
@@ -16,6 +17,7 @@ const _23ThaiAddressAutoCompletePicker = () => {
 
   return (
     <PageContainer>
+      <Head><title>ThaiAddressAutoCompletePicker</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-8" />

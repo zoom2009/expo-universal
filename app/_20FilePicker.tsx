@@ -5,6 +5,7 @@ import FilePicker from '@/components/FilePicker'
 import { DocumentPickerResult } from 'expo-document-picker'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _20FilePicker = () => {
   const [files, setFiles] = useState<any[]>([])
@@ -14,6 +15,7 @@ const _20FilePicker = () => {
 
   return (
     <PageContainer>
+      <Head><title>FilePicker</title></Head>
       <View className="h-2" />
       <Label required bold>NOTE</Label>
       <View className="h-2" />

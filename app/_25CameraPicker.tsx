@@ -5,12 +5,14 @@ import Label from '@/components/Label'
 import Button from '@/components/Button'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import { CameraPicker } from '@/components/CameraPicker'
+import Head from 'expo-router/head'
 
 const _25CameraPicker = () => {
   const [openCamera, setOpenCamera] = useState(false)
 
   return (
     <PageContainer>
+      <Head><title>CameraPicker</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

@@ -4,6 +4,7 @@ import Toggle, { TValue } from '@/components/Toggle'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import Dropdown from '@/components/Dropdown'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const defaultT1 = [
   { label: 'op1', value: false },
@@ -19,6 +20,7 @@ const _5Toggle = () => {
 
   return (
     <PageContainer>
+      <Head><title>Toggle</title></Head>
       <View className="h-2" />
       <View className="z-10">
         <Dropdown

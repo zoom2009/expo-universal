@@ -4,12 +4,14 @@ import PageContainer from '@/layout/PageContainer'
 import Label from '@/components/Label'
 import { Pagination } from '@/components/Pagination'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _21Pagination = () => {
   const [currentPage, setCurrentPage] = useState(10)
 
   return (
     <PageContainer>
+      <Head><title>Pagination</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

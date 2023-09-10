@@ -5,6 +5,7 @@ import Label from '@/components/Label'
 import Button from '@/components/Button'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _7LoadingSpinnerOverlay = () => {
   const [isShow1, setIsShow1] = useState(false)
@@ -12,6 +13,7 @@ const _7LoadingSpinnerOverlay = () => {
 
   return (
     <PageContainer>
+      <Head><title>LoadingSpinnerOverlay</title></Head>
       <LoadingSpinnerOverlay visible={isShow1} />
       <LoadingSpinnerOverlay
         visible={isShow2}

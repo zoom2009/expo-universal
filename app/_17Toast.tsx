@@ -5,10 +5,12 @@ import Button from '@/components/Button'
 import { displayToast } from '@/utilities/displayToast'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _17Toast = () => {
   return (
     <PageContainer>
+      <Head><title>Toast</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

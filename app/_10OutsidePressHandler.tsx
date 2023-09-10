@@ -5,6 +5,7 @@ import { OutsidePressHandler } from '@/components/OutsidePressHandler'
 import { useFocusEffect } from 'expo-router'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _10OutsidePressHandler = () => {
   const [counter, setCounter] = useState(0)
@@ -22,6 +23,7 @@ const _10OutsidePressHandler = () => {
 
   return (
     <PageContainer>
+      <Head><title>OutsidePressHandler</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

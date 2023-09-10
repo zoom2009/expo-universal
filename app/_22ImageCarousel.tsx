@@ -4,6 +4,7 @@ import PageContainer from '@/layout/PageContainer'
 import ImageCarousel from '@/components/ImageCarousel'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const imageList = [
   { uri: 'https://picsum.photos/id/1/500/500' },
@@ -17,6 +18,7 @@ const _22ImageCarousel = () => {
   const { width } = useWindowDimensions()
   return (
     <PageContainer>
+      <Head><title>ImageCarousel</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

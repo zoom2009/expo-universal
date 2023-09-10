@@ -6,6 +6,7 @@ import { ImagePickerResult } from 'expo-image-picker'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import { ACTIVE_OPACITY } from '@/components/Button'
+import Head from 'expo-router/head'
 
 const _19ImagePicker = () => {
   const [images, setImages] = useState<any>([])
@@ -15,6 +16,7 @@ const _19ImagePicker = () => {
 
   return (
     <PageContainer>
+      <Head><title>ImagePicker</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

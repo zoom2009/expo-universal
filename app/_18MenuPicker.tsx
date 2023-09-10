@@ -7,6 +7,7 @@ import theme from '@/utilities/theme'
 import Button from '@/components/Button'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _18MenuPicker = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
@@ -18,6 +19,7 @@ const _18MenuPicker = () => {
 
   return (
     <PageContainer>
+      <Head><title>MenuPicker</title></Head>
       <View className="h-2" />
       <Label bold>Basic Button</Label>
       <View className="h-4" />

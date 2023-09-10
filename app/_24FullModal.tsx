@@ -5,6 +5,7 @@ import Label from '@/components/Label'
 import Button from '@/components/Button'
 import { FullModal } from '@/components/FullModal'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _24FullModal = () => {
   const [open1, setOpen1] = useState(false)
@@ -12,6 +13,7 @@ const _24FullModal = () => {
 
   return (
     <PageContainer>
+      <Head><title>FullModal</title></Head>
       <View className="h-2" />
       <Label required bold>NOTE</Label>
       <View className="h-2" />

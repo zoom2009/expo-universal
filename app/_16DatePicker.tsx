@@ -5,6 +5,7 @@ import DatePicker from '@/components/DatePicker'
 import { getCurrentYear } from '@/utilities/date'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const currentYear = getCurrentYear()
 
@@ -13,6 +14,7 @@ const _16DatePicker = () => {
 
   return (
     <PageContainer>
+      <Head><title>DatePicker</title></Head>
       <View className="h-2" />
       <DatePicker
         bold

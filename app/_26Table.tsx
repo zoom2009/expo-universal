@@ -4,6 +4,7 @@ import PageContainer from '@/layout/PageContainer'
 import Label from '@/components/Label'
 import { Table } from '@/components/Table'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _26Table = () => {
   const content = [
@@ -16,6 +17,7 @@ const _26Table = () => {
 
   return (
     <PageContainer>
+      <Head><title>Table</title></Head>
       <View className="h-2" />
       <Label required bold>NOTE</Label>
       <View className="h-2" />

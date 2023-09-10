@@ -5,6 +5,7 @@ import Button from '@/components/Button'
 import SafeView from '@/components/SafeView'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
+import Head from 'expo-router/head'
 
 const _15ScrollTo = () => {
   const positionRef = useRef({ x: 0, y: 0 })
@@ -12,6 +13,7 @@ const _15ScrollTo = () => {
 
   return (
     <SafeView style={{ paddingTop: 0, paddingBottom: 0 }}>
+      <Head><title>ScrollTo</title></Head>
       <ScrollView ref={scrollViewRef} contentContainerStyle={{ flexGrow: 1, padding: 12 }}>
         <View className="h-2" />
         <Label bold>Basic</Label>

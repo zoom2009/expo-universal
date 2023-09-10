@@ -6,12 +6,14 @@ import CodeHighLighter from '@/components/CodeHighLighter'
 import { Layout } from '@/components/Layout'
 import Button from '@/components/Button'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _12Lottie = () => {
   const lottieRef: any = useRef()
 
   return (
     <PageContainer>
+      <Head><title>Lottie</title></Head>
       <View className="h-2" />
       <Label bold>Basic</Label>
       <View className="h-4" />

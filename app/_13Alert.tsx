@@ -5,6 +5,7 @@ import Button, { ACTIVE_OPACITY } from '@/components/Button'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _13Alert = () => {
   const [showAlert, setShowAlert] = useState(false)
@@ -12,6 +13,7 @@ const _13Alert = () => {
 
   return (
     <PageContainer>
+      <Head><title>Alert</title></Head>
       <Alert
         show={showAlert}
         title="Alert Title"

@@ -3,10 +3,12 @@ import React from 'react'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import Label from '@/components/Label'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const _1Label = () => {
   return (
     <PageContainer>
+      <Head><title>Label</title></Head>
       <View className="h-2" />
       <Label>Basic</Label>
       <View className="h-2" />

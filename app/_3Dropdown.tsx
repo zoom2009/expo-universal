@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Dropdown from '@/components/Dropdown'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const options = [
   { label: 'op1', value: 'op1' },
@@ -18,6 +19,7 @@ const _3DropDown = () => {
 
   return (
     <PageContainer>
+      <Head><title>Dropdown</title></Head>
       <View className="h-2" />
       <View style={{ zIndex: 3 }}>
         <Dropdown

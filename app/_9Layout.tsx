@@ -5,6 +5,7 @@ import { Layout } from '@/components/Layout'
 import Dropdown from '@/components/Dropdown'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import PageContainer from '@/layout/PageContainer'
+import Head from 'expo-router/head'
 
 const Box = () => (
   <View className="h-24 my-4 w-full border-[1px] border-[#ccc] bg-gray-200" />
@@ -42,6 +43,7 @@ const _9Layout = () => {
 
   return (
     <PageContainer>
+      <Head><title>Layout</title></Head>
       <View className="h-2" />
       <View className="z-10">
         <Dropdown

@@ -1,4 +1,5 @@
 import { View, Text, TouchableOpacity } from 'react-native'
+import Head from 'expo-router/head'
 import React from 'react'
 import PageContainer from '@/layout/PageContainer'
 import { ACTIVE_OPACITY } from '@/components/Button'
@@ -23,6 +24,10 @@ const Home = () => {
 
   return (
     <PageContainer>
+      <Head>
+        <title>Welcome</title>
+        <meta name="description" content="Welcome to expo-universal lib support both platform mobile and web." />
+      </Head>
       <View className="flex flex-1 px-8 py-4">
         <Text className="font-bold text-4xl text-primary">
           Welcome to Expo-Universal lib

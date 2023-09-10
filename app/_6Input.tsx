@@ -5,6 +5,7 @@ import Input from '@/components/Input'
 import Label from '@/components/Label'
 import CodeHighLighter from '@/components/CodeHighLighter'
 import { ACTIVE_OPACITY } from '@/components/Button'
+import Head from 'expo-router/head'
 
 const _6Input = () => {
   const [v, setV] = useState('')
@@ -12,6 +13,7 @@ const _6Input = () => {
 
   return (
     <PageContainer>
+      <Head><title>Input</title></Head>
       <View className="h-2" />
       <Input
         label="Basic Input"
