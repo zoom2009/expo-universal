@@ -13,10 +13,13 @@ import { getInsets } from '@/utilities/getInsets'
 import 'react-native-reanimated'
 import 'react-native-gesture-handler'
 
-ScreenOrientation.unlockAsync()
+declare const global: any
+if (Platform.OS === 'web') {
+  global._frameTimestamp = null
+} else {
+  ScreenOrientation.unlockAsync()
+}
 
-// @ts-ignore
-Platform.OS === 'web' && (global._frameTimestamp = null)
 NativeWindStyleSheet.setOutput({ default: 'native' })
 
 export default function Layout() {

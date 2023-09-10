@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@expo-google-fonts/courier-prime": "^0.2.3",
@@ -30,7 +31,9 @@
     "lottie-react-native": "5.1.6",
     "moti": "^0.26.0",
     "nativewind": "^2.0.11",
+    "patch-package": "^8.0.0",
     "phosphor-react-native": "^1.1.2",
+    "postinstall-postinstall": "^2.1.0",
     "ramda": "^0.29.0",
     "react": "18.2.0",
     "react-date-range": "^1.4.0",

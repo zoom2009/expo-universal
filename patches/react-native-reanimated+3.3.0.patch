@@ -1,0 +1,25 @@
+diff --git a/node_modules/react-native-reanimated/lib/module/reanimated2/js-reanimated/JSReanimated.js b/node_modules/react-native-reanimated/lib/module/reanimated2/js-reanimated/JSReanimated.js
+index 694d3c4..c397c3f 100644
+--- a/node_modules/react-native-reanimated/lib/module/reanimated2/js-reanimated/JSReanimated.js
++++ b/node_modules/react-native-reanimated/lib/module/reanimated2/js-reanimated/JSReanimated.js
+@@ -3,6 +3,11 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typ
+ function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+ import { NativeReanimated } from '../NativeReanimated/NativeReanimated';
+ import { SensorType } from '../commonTypes';
++
++// In Node.js environments (like when static rendering with Expo Router)
++// requestAnimationFrame is unavailable, so we use setImmediate.
++const scheduleOnUI = globalThis.requestAnimationFrame || globalThis.setImmediate;
++
+ export default class JSReanimated extends NativeReanimated {
+   constructor() {
+     super(false);
+@@ -19,7 +24,7 @@ export default class JSReanimated extends NativeReanimated {
+   }
+   scheduleOnUI(worklet) {
+     // @ts-ignore web implementation has still not been updated after the rewrite, this will be addressed once the web implementation updates are ready
+-    requestAnimationFrame(worklet);
++    scheduleOnUI(worklet);
+   }
+   registerEventHandler(_eventHash, _eventHandler) {
+     // noop
