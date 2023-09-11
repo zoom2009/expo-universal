@@ -67,3 +67,19 @@ expo universal libs component (support web &amp; mobile)
   - FullModal
   - CameraPicker
   - Table
+
+# TODO
+
+  - image resize before upload
+  - validator with zod
+  - charts
+  - postform when upload files with progress function + ui
+  - form creator function with json + good performance
+  - iap (free without any provider)
+
+# TODO Maybe
+
+  - image cache (wait until expo-image support run app with expo-go)
+  - analytic
+  - crashlytic
+  - google ads (admob)
