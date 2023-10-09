@@ -92,7 +92,8 @@ const DatePicker = (props: IDatePickerProps) => {
           <select
             style={selectStyle}
             onChange={onSelectMonth}
-            defaultValue={`${_day(currFocusedDate).month() + 1}`}
+            value={`${_day(currFocusedDate).month() + 1}`}
+            // defaultValue={`${_day(currFocusedDate).month() + 1}`}
           >
             {monthList.map((m, index) => (
               <option key={m} value={`${index + 1}`}>{m}</option>
@@ -102,7 +103,8 @@ const DatePicker = (props: IDatePickerProps) => {
           <select
             style={selectStyle}
             onChange={onSelectYear}
-            defaultValue={`${_day(currFocusedDate).year() + (IS_THAI_DATE ? 543 : 0)}`}
+            value={`${_day(currFocusedDate).year() + (IS_THAI_DATE ? 543 : 0)}`}
+            // defaultValue={`${_day(currFocusedDate).year() + (IS_THAI_DATE ? 543 : 0)}`}
           >
             {yearList.map((y, index) => (
               <option key={`${y}`} value={`${y}`}>{y}</option>
