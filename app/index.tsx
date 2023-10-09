@@ -63,7 +63,7 @@ const Home = () => {
         ))}
         <Line />
         <Text className="text-md text-danger">
-          <Text className="font-bold">Create By: </Text>Sikarin Punsawat
+          <Text className="font-bold">Create By: </Text>Sikarin Poonsawat
         </Text>
         <View className="h-10" />
       </View>
