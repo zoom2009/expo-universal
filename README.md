@@ -73,13 +73,17 @@ expo universal libs component (support web &amp; mobile)
   - improve toast position
   - add TimePicker component
   - add Switch component
+  - add PDF viewer component
+  - add Export Excel & PDF component
+  - add RichTextEditor component
+  - add charts components
   - image resize before upload
   - validator with zod
-  - charts components
   - postform when upload files with progress function + ui
   - form creator function with json + good performance
   - iap (free without any provider)
   - add example => some cool ecommerce-app!
+  - make this project as npm package
 
 # TODO Maybe
 
