@@ -1,6 +1,8 @@
 # NOTE
-No more update you guy can use **react-native-rnr** this is solve my all proble <br />
-react-native-rnr => https://rnr-docs.vercel.app/getting-started/introduction/
+No more update you guy can use **react-native-reusables** this is solve my all proble <br />
+react-native-reusables => https://rnr-docs.vercel.app/getting-started/introduction/
+
+<hr />
 
 # Expo-Universal lib
 expo universal libs component (support web &amp; mobile)
